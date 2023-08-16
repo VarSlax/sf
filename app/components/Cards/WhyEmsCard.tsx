@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Card = ({
+const WhyEmsCard = ({
   title,
   reasonIcon,
   explainings,
@@ -15,7 +15,7 @@ const Card = ({
 
   return (
     <>
-      <div className="m-5 flex flex-col bg-zinc-800 rounded-[25px] text-white text-base font-thin">
+      <div className="m-5 flex flex-col bg-zinc-800 rounded-[50px] text-white text-base font-thin">
         <div className="flex items-center mb-1">
           <div className="relative bottom-1 right-1 w-1/5 h-16 flex justify-center bg-neutral-700 rounded-[8px]">
             <Image className="flex" priority src={reasonIcon} alt="No reason" />
@@ -32,7 +32,6 @@ const Card = ({
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                {/* <circle cx="12" cy="12" r="11" /> */}
                 <path
                   d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
                   fill="none"
@@ -50,11 +49,11 @@ const Card = ({
             justifyContent: `${visible ? "flex-end" : "flex-start"}`,
           }}
         >
-          Приховати
+          {visible ? "Приховати" : "Детальніше"}
         </button>
       </div>
     </>
   );
 };
 
-export default Card;
+export default WhyEmsCard;

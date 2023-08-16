@@ -1,11 +1,11 @@
-import training from "public/cardsImages/training.svg";
-import health from "public/cardsImages/health.svg";
-import healthCare from "public/cardsImages/health-care.svg";
-import timer from "public/cardsImages/timer.svg";
-import gym from "public/cardsImages/gym.svg";
-import talentManagment from "public/cardsImages/talent-management.svg";
-import mom from "public/cardsImages/mom.svg";
-import scale from "public/cardsImages/scale.svg";
+import training from "public/cards/training.svg";
+import health from "public/cards/health.svg";
+import healthCare from "public/cards/health-care.svg";
+import timer from "public/cards/timer.svg";
+import gym from "public/cards/gym.svg";
+import talentManagment from "public/cards/talent-management.svg";
+import mom from "public/cards/mom.svg";
+import scale from "public/cards/scale.svg";
 
 const getIconForCard = (type) => {
   switch (type) {

@@ -1,6 +1,6 @@
-export const dataForCards = [
+export const dataForWhyEmsCards = [
   {
-    id: 1,
+    id: 112,
     reason: "training",
     title: "Ви не досягли своєї мети після тренувань",
     explainings: [
@@ -10,7 +10,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 2,
+    id: 212,
     reason: "timer",
     title: "Ви маєте обмежений час для тренувань",
     explainings: [
@@ -21,7 +21,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 3,
+    id: 312,
     reason: "talentManagment",
     title: "Ви прагнете збільшити свою ефективність",
     explainings: [
@@ -31,7 +31,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 4,
+    id: 412,
     reason: "mom",
     title: "Ви хочете швидше відновитись після пологів",
     explainings: [
@@ -44,7 +44,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 5,
+    id: 512,
     reason: "scale",
     title: "Вашою метою є швидке схуднення",
     explainings: [
@@ -55,7 +55,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 6,
+    id: 612,
     reason: "health",
     title: "Ви маєте проблеми зі здоров’ям",
     explainings: [
@@ -67,7 +67,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 7,
+    id: 712,
     reason: "gym",
     title: "Ви спортсмен і хочете підвищити продуктивність",
     explainings: [
@@ -78,7 +78,7 @@ export const dataForCards = [
     ],
   },
   {
-    id: 8,
+    id: 812,
     reason: "healthCare",
     title: "Вам 55+ Ви бажаєте бути здоровим і активним",
     explainings: [
