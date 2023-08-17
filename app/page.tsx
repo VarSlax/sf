@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import WhyEmsCard from "./components/Cards/WhyEmsCard";
 import EmsType from "./components/Cards/EmsType";
 import Faq from "./components/Faq";
+import PhotoGallery from "./components/PhotoGallery";
 import PriceCard from "./components/Cards/PriceCard";
 import Contacts from "./components/Contacts";
 import Map from "./components/Map";
@@ -18,11 +19,13 @@ import getIconForCard from "./utils/getIconForCard";
 import getBgImageForCard from "./utils/getBgImageForCard";
 import getIconForContacts from "./utils/getIconForContacts";
 import getIconForPriceCards from "./utils/getIconForPriceCards";
+import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
 
 export default function Page() {
   return (
     <div className="text-white text-lg font-thin">
       <Header />
+      <SwipedCardsWrapper />
       <div className="flex overflow-x-auto">
         {dataForEmsTypesCards.map(
           ({ id, title, explainings, type, additionalExplainings }) => (
@@ -62,11 +65,13 @@ export default function Page() {
           additionalInfo={additionalInfo}
         />
       ))}
+      <Title position="middle" title="Фотогалерея зали" />
+      <PhotoGallery />
       <Title position="center" title="Ціни на абонементи" />
       <div className="text-center mb-4">
         ціни можуть відрізнятися від студії
       </div>
-      <div className="flex space-x-6 overflow-x-auto mt-2.5 mb-10 mx-5 text-base">
+      <div className="flex space-x-6 overflow-x-auto mt-2.5 mx-5 text-base">
         {dataForPriceCards.map(({ id, description, type }) => (
           <PriceCard
             key={id}

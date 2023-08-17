@@ -15,15 +15,16 @@ const EmsType = ({
   explainings: Array<string | undefined>;
   additionalExplainings: Array<string | undefined>;
 }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   return (
     <>
       <div
-        className="m-5 w-80 flex flex-col justify-between bg-cover bg-zinc-800 rounded-[50px] text-base relative"
+        className="mx-2 my-10 flex flex-col justify-between bg-cover bg-zinc-800 rounded-[50px] text-base relative"
         style={{
+          width: "21rem",
           minWidth: "21rem",
-          height: "60vh",
+          height: "66vh",
           backgroundImage: `url(${bgImage.src})`,
         }}
       >

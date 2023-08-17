@@ -19,5 +19,14 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #171717;
-  /* font-family: "Courier New", Courier, monospace; */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f2b700 !important;
+  padding: 8px;
+}
+
+.swiper-pagination-bullet {
+  padding: 8px;
+  background-color: #00000080 !important;
 }
