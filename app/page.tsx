@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Burger from "./components/BurgerWrapper";
+import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
 import FAQImage from "public/faq-main-photo.png";
 import Header from "./components/Header";
 import Title from "./components/Title";
@@ -19,7 +21,6 @@ import getIconForCard from "./utils/getIconForCard";
 import getBgImageForCard from "./utils/getBgImageForCard";
 import getIconForContacts from "./utils/getIconForContacts";
 import getIconForPriceCards from "./utils/getIconForPriceCards";
-import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
 
 export default function Page() {
   return (

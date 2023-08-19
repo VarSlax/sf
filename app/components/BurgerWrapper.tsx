@@ -1,0 +1,34 @@
+"use client";
+import { useState } from "react";
+import Hamburger from "hamburger-react";
+import Burgerinfo from "./BurgerInfo";
+import { dataForBurger } from "./Cards/constants/dataForBurger";
+
+const BurgerWrapper = () => {
+  const [nav, setNav] = useState(false);
+
+  const showNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    <>
+      <header className="bg-neutral-900 flex justify-around items-center border-2 border-yellow-500">
+        <Hamburger onToggle={showNav} />
+        <nav
+          className={`h-[100vh] fixed top-[0px] flex flex-col w-full md:hidden bg-neutral-900 z-40 duration-1000 ${
+            nav ? "right-[0px]" : "right-[-100vw]"
+          } `}
+        >
+          <div className="flex flex-col justify-around mt-32 m-2 text-white text-3xl font-semibold uppercase">
+            {dataForBurger.map(({ title, id }) => (
+              <Burgerinfo key={id} title={title} />
+            ))}
+          </div>
+        </nav>
+      </header>
+    </>
+  );
+};
+
+export default BurgerWrapper;

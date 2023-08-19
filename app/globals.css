@@ -30,3 +30,8 @@ body {
   padding: 8px;
   background-color: #00000080 !important;
 }
+
+.hamburger-react {
+  color: #f2b700;
+  z-index: 50;
+}
