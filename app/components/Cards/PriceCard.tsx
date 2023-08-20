@@ -16,6 +16,7 @@ const PriceCard = ({
 
   return (
     <div
+      id="abonements-section"
       style={{
         width: "10px",
         minWidth: "15rem",

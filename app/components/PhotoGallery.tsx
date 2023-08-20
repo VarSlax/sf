@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 const PhotoGallery = () => {
   return (
     <Swiper
+      id="photo-gallery-section"
       scrollbar={{
         hide: true,
       }}

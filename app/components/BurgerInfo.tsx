@@ -1,10 +1,18 @@
 import React from "react";
 import Link from "next/link";
 
-const BurgerInfo = ({ title }: { title: string }) => {
+const BurgerInfo = ({
+  title,
+  onClick,
+  href,
+}: {
+  title: string;
+  href: string;
+  onClick: React.ReactEventHandler;
+}) => {
   return (
     <>
-      <Link href="/" className="my-2">
+      <Link onClick={onClick} href={href} scroll={true} className="my-2">
         {title}
       </Link>
       <div className="border-black h-px border-b-[2px]"></div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Burger from "./components/BurgerWrapper";
 import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
 import FAQImage from "public/faq-main-photo.png";
 import Header from "./components/Header";
@@ -22,7 +21,7 @@ import getBgImageForCard from "./utils/getBgImageForCard";
 import getIconForContacts from "./utils/getIconForContacts";
 import getIconForPriceCards from "./utils/getIconForPriceCards";
 
-export default function Page() {
+const Page = () => {
   return (
     <div className="text-white text-lg font-thin">
       <Header />
@@ -40,16 +39,18 @@ export default function Page() {
           )
         )}
       </div>
-      <Title position="" title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
-      <div>
-        {dataForWhyEmsCards.map(({ id, title, explainings, reason }) => (
-          <WhyEmsCard
-            key={id}
-            title={title}
-            explainings={explainings}
-            reasonIcon={getIconForCard(reason)}
-          />
-        ))}
+      <div id="ems-section">
+        <Title position="" title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
+        <div>
+          {dataForWhyEmsCards.map(({ id, title, explainings, reason }) => (
+            <WhyEmsCard
+              key={id}
+              title={title}
+              explainings={explainings}
+              reasonIcon={getIconForCard(reason)}
+            />
+          ))}
+        </div>
       </div>
       <Image src={FAQImage} className="w-full mt-10" alt="no photo" />
       <Title position="" title="Часті запитання" />
@@ -66,28 +67,36 @@ export default function Page() {
           additionalInfo={additionalInfo}
         />
       ))}
-      <Title position="middle" title="Фотогалерея зали" />
-      <PhotoGallery />
-      <Title position="center" title="Ціни на абонементи" />
-      <div className="text-center mb-4">
-        ціни можуть відрізнятися від студії
+      <div id="photo-gallery-section">
+        <Title position="middle" title="Фотогалерея зали" />
+        <PhotoGallery />
       </div>
-      <div className="flex space-x-6 overflow-x-auto mt-2.5 mx-5 text-base">
-        {dataForPriceCards.map(({ id, description, type }) => (
-          <PriceCard
-            key={id}
-            id={id}
-            info={description}
-            iconType={getIconForPriceCards(type)}
-          />
+      <div id="abonements-section">
+        <Title position="center" title="Ціни на абонементи" />
+        <div className="text-center mb-4">
+          ціни можуть відрізнятися від студії
+        </div>
+        <div className="flex space-x-6 overflow-x-auto mt-2.5 mx-5 text-base">
+          {dataForPriceCards.map(({ id, description, type }) => (
+            <PriceCard
+              key={id}
+              id={id}
+              info={description}
+              iconType={getIconForPriceCards(type)}
+            />
+          ))}
+        </div>
+      </div>
+      <div id="contacts-section">
+        <Title position="center" title="Контакти" />
+        {dataForContacts.map(({ id, type, info }) => (
+          <Contacts key={id} info={info} icon={getIconForContacts(type)} />
         ))}
       </div>
-      <Title position="center" title="Контакти" />
-      {dataForContacts.map(({ id, type, info }) => (
-        <Contacts key={id} info={info} icon={getIconForContacts(type)} />
-      ))}
       <Map />
       <Footer />
     </div>
   );
-}
+};
+
+export default Page;
