@@ -29,7 +29,7 @@ const EmsType = ({
         }}
       >
         <div>
-          <span className="my-2.5 mx-5 text-yellow-500 font-semibold text-3xl uppercase absolute">
+          <span className="my-2.5 mx-5 w-full text-yellow-500 font-semibold text-3xl uppercase absolute">
             {title}
           </span>
           {visible && <Image src={topPart} className="w-full" alt="aboba" />}

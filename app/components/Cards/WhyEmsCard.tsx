@@ -43,7 +43,7 @@ const WhyEmsCard = ({
         </div>
         <button
           onClick={() => setVisible((vis) => !vis)}
-          className="my-2 mx-6 text-white text-xs font-thin text-end"
+          className="my-2 mx-6 p-1 text-white text-xs font-thin text-end"
           style={{
             display: "flex",
             justifyContent: `${visible ? "flex-end" : "flex-start"}`,
