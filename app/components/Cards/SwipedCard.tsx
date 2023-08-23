@@ -20,15 +20,15 @@ const SwipedCard = ({
           backgroundImage: `url(${bgImage.src})`,
         }}
       >
-        <span className="absolute z-10 flex my-2.5 mx-5 h-4 text-yellow-500 font-semibold text-3xl uppercase">
+        <span className="absolute z-10 flex my-2.5 mx-5 h-4 text-golden font-semibold text-3xl uppercase">
           {title}
         </span>
         <div className="flex">
-          <div className="absolute z-10 w-2/3 top-20 left-5 description text-lg">
+          <div className="absolute z-10 w-7/12 top-20 left-5 description text-base">
             {description}
           </div>
         </div>
-        <button className="absolute mt-56 ml-4 z-10 px-8 py-0.5 text-black text-2xl font-semibold bg-yellow-500 rounded-3xl">
+        <button className="absolute mt-56 ml-4 z-10 px-8 py-0.5 text-black text-2xl font-semibold bg-golden rounded-3xl">
           Замовити
         </button>
         <Image

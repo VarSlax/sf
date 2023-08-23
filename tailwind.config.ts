@@ -18,6 +18,13 @@ const config: Config = {
         "gradient-sf":
           "linear-gradient(90deg, #9747FF 0%, #F2B700 50%, #9747FF 100%)",
       },
+      colors: {
+      'golden': '#f2b700',
+      'burger-bg': '#171717',
+      'gray-middle': '#27272a',
+      'gray-light': '#404040',
+      'purple': '#9a34e8',
+    },
     },
   },
   plugins: [],

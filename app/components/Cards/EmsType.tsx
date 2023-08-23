@@ -20,7 +20,7 @@ const EmsType = ({
   return (
     <>
       <div
-        className="mx-2 my-10 flex flex-col justify-between bg-cover bg-zinc-800 rounded-[50px] text-base relative"
+        className="mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-[50px] text-base relative"
         style={{
           width: "21rem",
           minWidth: "21rem",
@@ -29,7 +29,7 @@ const EmsType = ({
         }}
       >
         <div>
-          <span className="my-2.5 mx-5 w-full text-yellow-500 font-semibold text-3xl uppercase absolute">
+          <span className="my-2.5 mx-5 w-full text-golden font-semibold text-3xl uppercase absolute">
             {title}
           </span>
           {visible && <Image src={topPart} className="w-full" alt="aboba" />}
@@ -65,7 +65,7 @@ const EmsType = ({
                       >
                         {i > 0 && (
                           <svg
-                            className="h-6 w-6 mr-2 flex-none stroke-yellow-500 stroke-2"
+                            className="h-6 w-6 mr-2 flex-none stroke-golden stroke-2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                           >

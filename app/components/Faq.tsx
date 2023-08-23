@@ -28,7 +28,7 @@ const Faq = ({
             </div>
           ) : (
             <>
-              <div className="text-yellow-500 my-3 mx-4">
+              <div className="text-golden my-3 mx-4">
                 <div
                   onClick={() => setVisible((vis) => !vis)}
                   className="flex justify-end"
@@ -51,7 +51,7 @@ const Faq = ({
                             key={i + 54}
                           >
                             <svg
-                              className="h-6 w-6 mr-2 flex-none stroke-yellow-500 stroke-2"
+                              className="h-6 w-6 mr-2 flex-none stroke-golden stroke-2"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             >

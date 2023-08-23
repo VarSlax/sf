@@ -53,7 +53,7 @@ const PriceCard = ({
             ? "rgba(242, 183, 0, 0.85)"
             : "rgba(154, 52, 232, 0.45)",
         }}
-        className="flex px-8 py-2 text-black text-2xl font-semibold bg-purple-600 bg-opacity-40 rounded-3xl border border-white border-opacity-40"
+        className="flex px-8 py-2 text-black text-2xl font-semibold bg-purple bg-opacity-40 rounded-3xl border border-white border-opacity-40"
       >
         Замовити
       </button>
