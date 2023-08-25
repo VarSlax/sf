@@ -41,7 +41,7 @@ const EmsType = ({
           {!additionalExplainings
             ? explainings.map((explain, i) => (
                 <div
-                  className="mx-2.5 mb-4 flex items-center text-base text-white font-thin"
+                  className="mx-2.5 mb-4 flex items-center text-base text-white"
                   key={i + 1}
                 >
                   {explain}
@@ -85,7 +85,7 @@ const EmsType = ({
             onClick={() => setVisible((vis) => !vis)}
             className={`flex ${
               visible ? "justify-end" : "justify-start"
-            } my-2 mx-6 text-white text-xl font-thin text-end absolute right-[1%] bottom-[1%]`}
+            } my-2 mx-6 text-white text-xl text-end absolute right-[1%] bottom-[1%]`}
           >
             {visible ? "Детальніше" : "Приховати"}
           </button>

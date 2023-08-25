@@ -23,7 +23,7 @@ import getIconForPriceCards from "./utils/getIconForPriceCards";
 
 const Page = () => {
   return (
-    <div className="text-white text-lg font-thin">
+    <div className="text-white text-lg">
       <Header />
       <SwipedCardsWrapper />
       <div className="flex overflow-x-auto">

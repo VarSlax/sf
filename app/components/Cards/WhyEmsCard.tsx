@@ -15,12 +15,12 @@ const WhyEmsCard = ({
 
   return (
     <>
-      <div className="m-5 flex flex-col bg-gray-middle rounded-3xl text-white text-base font-thin">
+      <div className="m-5 flex flex-col bg-gray-middle rounded-3xl text-white text-base">
         <div className="flex items-center mb-1">
           <div className="relative bottom-1 right-1 w-1/5 h-16 flex justify-center bg-gray-light rounded-lg">
             <Image className="flex" priority src={reasonIcon} alt="No reason" />
           </div>
-          <span className="mx-2 text-golden font-thin text-xs">{title}</span>
+          <span className="mx-2 text-golden text-xs">{title}</span>
         </div>
         <div className={visible ? "block" : "hidden"}>
           {explainings.map((explain, i) => (
@@ -46,7 +46,7 @@ const WhyEmsCard = ({
           onClick={() => setVisible((vis) => !vis)}
           className={`flex ${
             visible ? "justify-end" : "justify-start"
-          } my-2 mx-6 p-1 text-white text-xs font-thin text-end`}
+          } my-2 mx-6 p-1 text-white text-xs text-end`}
         >
           {visible ? "Приховати" : "Детальніше"}
         </button>

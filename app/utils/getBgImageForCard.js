@@ -1,6 +1,6 @@
-import suit from "public/cards/suit.png";
-import massage from "public/cards/massage.png";
-import training from "public/cards/training.png";
+import suit from "public/cards/suit.jpeg";
+import massage from "public/cards/massage.jpeg";
+import training from "public/cards/training.jpeg";
 
 const getBgImageForCard = (type) => {
   switch (type) {

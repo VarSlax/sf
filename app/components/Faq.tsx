@@ -47,7 +47,7 @@ const Faq = ({
                       <>
                         {additionalInfo.map((info, i) => (
                           <div
-                            className="text-white mx-2.5 text-base flex items-center mb-3"
+                            className="mx-2.5 mb-3 text-base flex items-center text-white"
                             key={i + 54}
                           >
                             <svg
