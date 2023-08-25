@@ -14,9 +14,8 @@ const SwipedCard = ({
   return (
     <>
       <div
-        className="relative bg-cover"
+        className="h-mobile-card-height relative bg-cover"
         style={{
-          height: "66vh",
           backgroundImage: `url(${bgImage.src})`,
         }}
       >
@@ -36,7 +35,7 @@ const SwipedCard = ({
           layout="fill"
           objectFit="contain"
           className="h-initial-height-important"
-          alt="aboba"
+          alt="no logo"
         />
       </div>
     </>

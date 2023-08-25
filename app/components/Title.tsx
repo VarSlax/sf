@@ -8,8 +8,9 @@ const Title = ({
   position: string | "";
 }) => (
   <div
-    style={{ display: "flex", justifyContent: position ? "center" : "start" }}
-    className="mt-12 mb-2 mx-5 text-golden font-semibold text-2xl uppercase"
+    className={`flex ${
+      position ? "justify-center" : "justify-start"
+    } mt-12 mb-2 mx-5 text-golden font-semibold text-2xl uppercase`}
   >
     {title}
   </div>

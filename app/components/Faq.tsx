@@ -45,15 +45,15 @@ const Faq = ({
                   <div>
                     {
                       <>
-                        {additionalInfo.map((x, i) => (
+                        {additionalInfo.map((info, i) => (
                           <div
                             className="text-white mx-2.5 text-base flex items-center mb-3"
                             key={i + 54}
                           >
                             <svg
                               className="h-6 w-6 mr-2 flex-none stroke-golden stroke-2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               <path
                                 d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
@@ -61,7 +61,7 @@ const Faq = ({
                               />
                             </svg>
 
-                            {x}
+                            {info}
                           </div>
                         ))}
                       </>

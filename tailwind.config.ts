@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       height: {
         "initial-height-important": "initial !important",
+        "mobile-card-height": "66vh",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -19,12 +20,15 @@ const config: Config = {
           "linear-gradient(90deg, #9747FF 0%, #F2B700 50%, #9747FF 100%)",
       },
       colors: {
-      'golden': '#f2b700',
-      'burger-bg': '#171717',
-      'gray-middle': '#27272a',
-      'gray-light': '#404040',
-      'purple': '#9a34e8',
-    },
+        golden: "#f2b700",
+        purple: "#9a34e8",
+        "burger-bg": "#171717",
+        "gray-middle": "#27272a",
+        "gray-light": "#404040",
+      },
+      borderRadius: {
+        "card-radius": "50px",
+      },
     },
   },
   plugins: [],

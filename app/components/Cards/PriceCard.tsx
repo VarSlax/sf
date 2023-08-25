@@ -18,15 +18,12 @@ const PriceCard = ({
     <div
       id="abonements-section"
       style={{
-        width: "10px",
-        minWidth: "15rem",
-        height: "45vh",
         border: even ? "0.50px #F2B700 solid" : "0.50px #9A34E8 solid",
         background: even
           ? "rgba(242, 183, 0, 0.10)"
           : "rgba(154, 52, 232, 0.10)",
       }}
-      className="flex flex-col items-center justify-between p-4 rounded-[50px]"
+      className="flex flex-col items-center justify-between w-3 h-[45vh] min-w-[15rem] p-4 rounded-card-radius"
     >
       <div className="relative">
         {even ? (
@@ -42,7 +39,7 @@ const PriceCard = ({
       </div>
       <div>
         {info.map((point, i) => (
-          <div className="text-center" key={i}>
+          <div className="text-center" key={i + 34}>
             {point}
           </div>
         ))}

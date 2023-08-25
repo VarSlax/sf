@@ -10,7 +10,7 @@ const Contacts = ({
 }) => (
   <div className="mx-4">
     <div className="flex">
-      <Image className="mr-4" src={icon} alt="aboba" />
+      <Image className="mr-4" src={icon} alt="no logo" />
       {typeof info === "string" ? (
         <div className="my-2">{info}</div>
       ) : (

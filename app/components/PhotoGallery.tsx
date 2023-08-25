@@ -26,7 +26,7 @@ const PhotoGallery = () => {
           <Image
             className="w-full"
             src={getImageForGallery(type) ?? ""}
-            alt="aboba"
+            alt="no logo"
           />
         </SwiperSlide>
       ))}

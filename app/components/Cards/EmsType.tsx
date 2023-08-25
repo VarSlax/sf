@@ -20,11 +20,9 @@ const EmsType = ({
   return (
     <>
       <div
-        className="mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-[50px] text-base relative"
+        className={`
+           w-[21rem] min-w-[21rem] h-mobile-card-height mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-card-radius text-base relative`}
         style={{
-          width: "21rem",
-          minWidth: "21rem",
-          height: "66vh",
           backgroundImage: `url(${bgImage.src})`,
         }}
       >
@@ -32,42 +30,42 @@ const EmsType = ({
           <span className="my-2.5 mx-5 w-full text-golden font-semibold text-3xl uppercase absolute">
             {title}
           </span>
-          {visible && <Image src={topPart} className="w-full" alt="aboba" />}
+          {visible && <Image src={topPart} className="w-full" alt="no logo" />}
         </div>
         <div
+          className={`${visible ? "hidden" : "block"}`}
           style={{
-            display: visible ? "none" : "block",
             backdropFilter: visible ? "inherit" : "brightness(0.3)",
           }}
         >
           {!additionalExplainings
-            ? explainings.map((el, i) => (
+            ? explainings.map((explain, i) => (
                 <div
                   className="mx-2.5 mb-4 flex items-center text-base text-white font-thin"
-                  key={i}
+                  key={i + 1}
                 >
-                  {el}
+                  {explain}
                 </div>
               ))
-            : explainings.map((x, i) => (
+            : explainings.map((explain, i) => (
                 <>
                   <div
                     className="mx-2.5 text-base flex items-center mb-4"
-                    key={i}
+                    key={i + 2}
                   >
-                    {x}
+                    {explain}
                   </div>
                   <div>
-                    {additionalExplainings.map((x, i) => (
+                    {additionalExplainings.map((additionalExplain, i) => (
                       <div
                         className="mx-2.5 text-base flex items-center mb-0.5"
-                        key={i + 100}
+                        key={i + 3}
                       >
                         {i > 0 && (
                           <svg
                             className="h-6 w-6 mr-2 flex-none stroke-golden stroke-2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path
                               d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
@@ -75,7 +73,7 @@ const EmsType = ({
                             />
                           </svg>
                         )}
-                        {x}
+                        {additionalExplain}
                       </div>
                     ))}
                   </div>
@@ -85,22 +83,17 @@ const EmsType = ({
         <div className="ml-6">
           <button
             onClick={() => setVisible((vis) => !vis)}
-            className="my-2 mx-6 text-white text-xl font-thin text-end absolute"
-            style={{
-              display: "flex",
-              justifyContent: `${visible ? "flex-end" : "flex-start"}`,
-              right: "1%",
-              bottom: "1%",
-            }}
+            className={`flex ${
+              visible ? "justify-end" : "justify-start"
+            } my-2 mx-6 text-white text-xl font-thin text-end absolute right-[1%] bottom-[1%]`}
           >
             {visible ? "Детальніше" : "Приховати"}
           </button>
           {visible && (
             <Image
-              style={{ marginBottom: "-1px" }}
               src={bottomPart}
-              className="w-full"
-              alt="aboba"
+              className="w-full mb-[-1px]"
+              alt="no logo"
             />
           )}
         </div>
