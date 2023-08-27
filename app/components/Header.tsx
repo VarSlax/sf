@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <div className="flex justify-between m-5">
         <Image
-          className="flex sticky z-50"
+          className="flex sticky z-50 animation-pulse"
           priority
           src={mainLogo}
           alt="No logo"

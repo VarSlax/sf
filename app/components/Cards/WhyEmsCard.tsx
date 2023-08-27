@@ -17,10 +17,10 @@ const WhyEmsCard = ({
     <>
       <div className="m-5 flex flex-col bg-gray-middle rounded-3xl text-white text-base">
         <div className="flex items-center mb-1">
-          <div className="relative bottom-1 right-1 w-1/5 h-16 flex justify-center bg-gray-light rounded-lg">
+          <div className="relative bottom-1 right-1 w-1/4 h-16 flex justify-center bg-gray-light rounded-lg">
             <Image className="flex" priority src={reasonIcon} alt="No reason" />
           </div>
-          <span className="mx-2 text-golden text-xs">{title}</span>
+          <span className="mx-2 text-golden text-base">{title}</span>
         </div>
         <div className={visible ? "block" : "hidden"}>
           {explainings.map((explain, i) => (

@@ -21,13 +21,13 @@ const EmsType = ({
     <>
       <div
         className={`
-           w-[21rem] min-w-[21rem] h-mobile-card-height mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-card-radius text-base relative`}
+           w-[21rem] min-w-[21rem] h-mobile-card-height xl:min-w-[31rem] xl:rounded-[68px] mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-card-radius text-base relative`}
         style={{
           backgroundImage: `url(${bgImage.src})`,
         }}
       >
         <div>
-          <span className="my-2.5 mx-5 w-full text-golden font-semibold text-3xl uppercase absolute">
+          <span className="my-2.5 mx-5 xl:my-10 xl:mx-10 w-full text-golden font-semibold text-3xl uppercase absolute">
             {title}
           </span>
           {visible && <Image src={topPart} className="w-full" alt="no logo" />}

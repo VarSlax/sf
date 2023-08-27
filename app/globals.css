@@ -35,3 +35,24 @@ body {
   color: #f2b700;
   z-index: 50;
 }
+
+.animation-pulse {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    filter: invert(100%);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: invert(0%);
+  }
+
+  100% {
+    transform: scale(0.8);
+    filter: invert(100%);
+  }
+}
