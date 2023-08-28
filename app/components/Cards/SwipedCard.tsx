@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import divider from "public/cards/swipe-card-divider.svg";
 
@@ -11,6 +13,8 @@ const SwipedCard = ({
   bgImage: string;
   description: string;
 }) => {
+  const { push } = useRouter();
+
   return (
     <>
       <div
@@ -27,7 +31,10 @@ const SwipedCard = ({
             {description}
           </div>
         </div>
-        <button className="absolute mt-56 ml-4 z-10 px-8 py-0.5 text-black text-2xl font-semibold bg-golden rounded-3xl">
+        <button
+          onClick={() => push("/order")}
+          className="absolute mt-56 ml-4 z-10 px-8 py-0.5 text-black text-2xl font-semibold bg-golden rounded-3xl cursor-pointer"
+        >
           Замовити
         </button>
         <Image

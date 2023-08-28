@@ -16,7 +16,7 @@ const BurgerWrapper = () => {
             nav ? "right-[0px]" : "right-[-100vw]"
           } `}
         >
-          <div className="flex flex-col justify-around mt-32 m-2 text-white text-3xl font-semibold uppercase">
+          <div className="flex flex-col justify-around mt-28 m-2 text-white text-2xl font-semibold uppercase">
             {dataForBurger.map(({ id, title, href }) => (
               <Burgerinfo
                 href={href}

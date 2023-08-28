@@ -1,7 +1,7 @@
 export const dataForBurger = [
   {
     id: 13224,
-    title: "Тренування",
+    title: "Тренування(Головна)",
     href: "/",
   },
   {

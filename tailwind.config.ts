@@ -25,6 +25,7 @@ const config: Config = {
         "burger-bg": "#171717",
         "gray-middle": "#27272a",
         "gray-light": "#404040",
+        "order-card-bg": "#1C1C1C",
       },
       borderRadius: {
         "card-radius": "50px",
