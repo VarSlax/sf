@@ -10,7 +10,7 @@ const Faq = ({
 }: {
   question: string;
   answer: string;
-  additionalInfo: Array<string | undefined | []>;
+  additionalInfo: Array<string> | undefined;
 }) => {
   const [visible, setVisible] = useState(false);
 

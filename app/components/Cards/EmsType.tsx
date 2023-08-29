@@ -11,9 +11,9 @@ const EmsType = ({
   additionalExplainings,
 }: {
   title: string;
-  bgImage: string;
+  bgImage: any;
   explainings: Array<string | undefined>;
-  additionalExplainings: Array<string | undefined>;
+  additionalExplainings: Array<string> | undefined;
 }) => {
   const [visible, setVisible] = useState(true);
 

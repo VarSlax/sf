@@ -10,7 +10,7 @@ const SwipedCard = ({
   description,
 }: {
   title: string;
-  bgImage: string;
+  bgImage: any;
   description: string;
 }) => {
   const { push } = useRouter();
