@@ -9,8 +9,10 @@ const BurgerWrapper = () => {
 
   return (
     <>
-      <header className="bg-burger-bg flex justify-around items-center border-2 border-golden">
-        <Hamburger toggled={nav} toggle={setNav} />
+      <header className="bg-burger-bg flex justify-around items-center ">
+        <div className="border-2 border-golden md:hidden">
+          <Hamburger toggled={nav} toggle={setNav} />
+        </div>
         <nav
           className={`h-[100vh] fixed top-[0px] flex flex-col w-full md:hidden bg-burger-bg z-40 duration-1000 ${
             nav ? "right-[0px]" : "right-[-100vw]"
