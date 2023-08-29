@@ -45,16 +45,16 @@ const OrderPage = () => {
               placeholder="Як до Вас звертатись?*"
               {...register("name", {
                 required:
-                  "Iм'я має бути не менше ніж 2 символи та містити букви.",
+                  "Iм'я має бути не менше ніж 2 літери та містити букви.",
                 pattern: {
-                  value: /[A-Za-z]/,
+                  value: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u,
                   message:
-                    "Iм'я має бути не менше ніж 2 символи та містити букви.",
+                    "Iм'я має бути не менше ніж 2 літери та містити букви.",
                 },
                 minLength: {
                   value: 2,
                   message:
-                    "Iм'я має бути не менше ніж 2 символи та містити букви.",
+                    "Iм'я має бути не менше ніж 2 літери та містити букви.",
                 },
               })}
               className="w-full mt-4 px-4 mb-2 py-2 text-base bg-order-card-bg rounded-2xl border border-golden font-extralight"

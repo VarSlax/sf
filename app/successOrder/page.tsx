@@ -7,14 +7,14 @@ const SuccessOrder = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    setTimeout(() => push("/"), 5000);
+    setTimeout(() => push("/"), 500000);
   });
 
   return (
     <>
       <Header />
       <div className="">
-        <div className="my-52 mx-4 bg-order-card-bg rounded-3xl border border-golden backdrop-blur-sm text-center text-3xl font-semibold text-golden">
+        <div className="my-52 mx-4 py-1 px-3 bg-order-card-bg rounded-3xl border border-golden backdrop-blur-sm text-center text-3xl font-semibold text-golden">
           Дякуємо за довіру! Ми зв'яжемося з вами найближчим часом
         </div>
       </div>
