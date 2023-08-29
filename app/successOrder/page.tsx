@@ -7,7 +7,7 @@ const SuccessOrder = () => {
   const { push } = useRouter();
 
   useEffect(() => {
-    setTimeout(() => push("/"), 500000);
+    setTimeout(() => push("/"), 5000);
   });
 
   return (
