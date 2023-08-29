@@ -11,8 +11,4 @@ export const dataForPhotoGallery = [
     id: 65417,
     type: "functionalPower",
   },
-  {
-    id: 23417,
-    type: "massage",
-  },
 ];

@@ -1,7 +1,7 @@
 import ems from "public/cards/ems-swiped-bg.png";
 import boxing from "public/cards/box-swiped-bg.png";
 import functionalPower from "public/cards/functional-power-swiped-bg.png";
-import massage from "public/cards/massage-swiped-bg.png";
+import massage from "public/cards/massage.jpeg";
 
 const getBgImageForSwipedCard = (type) => {
   switch (type) {
