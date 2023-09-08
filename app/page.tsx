@@ -1,46 +1,38 @@
-import Image from "next/image";
-import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
-import FAQImage from "public/faq-main-photo.png";
-import Header from "./components/Header";
-import Title from "./components/Title";
-import WhyEmsCard from "./components/Cards/WhyEmsCard";
-import EmsType from "./components/Cards/EmsType";
-import Faq from "./components/Faq";
-import PhotoGallery from "./components/PhotoGallery";
-import PriceCard from "./components/Cards/PriceCard";
-import Contacts from "./components/Contacts";
-import Map from "./components/Map";
-import Footer from "./components/Footer";
-import { dataForWhyEmsCards } from "./components/Cards/constants/dataForWhyEmsCards";
-import { dataForEmsTypesCards } from "./components/Cards/constants/dataForEmsTypesCards";
-import { dataForFaq } from "./components/Cards/constants/dataForFaq";
-import { dataForContacts } from "./components/Cards/constants/dataForContacts";
-import { dataForPriceCards } from "./components/Cards/constants/dataForPriceCard";
-import getIconForCard from "./utils/getIconForCard";
-import getBgImageForCard from "./utils/getBgImageForCard";
-import getIconForContacts from "./utils/getIconForContacts";
-import getIconForPriceCards from "./utils/getIconForPriceCards";
+import Image from 'next/image';
+import SwipedCardsWrapper from './components/Cards/SwipedCardsWrapper';
+import FAQImage from 'public/faq-main-photo.png';
+import Header from './components/Header';
+import Title from './components/Title';
+import WhyEmsCard from './components/Cards/WhyEmsCard';
+import EmsType from './components/Cards/EmsType';
+import Faq from './components/Faq';
+import PhotoGallery from './components/PhotoGallery';
+import PriceCard from './components/Cards/PriceCard';
+import Contacts from './components/Contacts';
+import Map from './components/Map';
+import Footer from './components/Footer';
+import { dataForWhyEmsCards } from './components/Cards/constants/dataForWhyEmsCards';
+import { dataForEmsTypesCards } from './components/Cards/constants/dataForEmsTypesCards';
+import { dataForFaq } from './components/Cards/constants/dataForFaq';
+import { dataForContacts } from './components/Cards/constants/dataForContacts';
+import { dataForPriceCards } from './components/Cards/constants/dataForPriceCard';
+import getIconForCard from './utils/getIconForCard';
+import getBgImageForCard from './utils/getBgImageForCard';
+import getIconForContacts from './utils/getIconForContacts';
+import getIconForPriceCards from './utils/getIconForPriceCards';
 
-const Page = () => {
+export default function Main() {
   return (
     <div className="text-white text-lg">
       <Header />
       <SwipedCardsWrapper />
       <div className="flex overflow-x-auto">
-        {dataForEmsTypesCards.map(
-          ({ id, title, explainings, type, additionalExplainings }) => (
-            <EmsType
-              key={id}
-              title={title}
-              explainings={explainings}
-              bgImage={getBgImageForCard(type)}
-              additionalExplainings={additionalExplainings}
-            />
-          )
-        )}
+        {dataForEmsTypesCards.map(({ id, ...props }) => (
+          <EmsType key={id} {...props} />
+        ))}
       </div>
       <div id="ems-section">
-        <Title position="" title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
+        <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
         <div>
           {dataForWhyEmsCards.map(({ id, title, explainings, reason }) => (
             <WhyEmsCard
@@ -97,6 +89,4 @@ const Page = () => {
       <Footer />
     </div>
   );
-};
-
-export default Page;
+}
