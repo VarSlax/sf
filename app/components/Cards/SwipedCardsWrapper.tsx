@@ -9,9 +9,8 @@ interface Card {
   id: number;
   type: string;
   title: string;
-  description: string;
-  explainings?: string[];
-  additionalExplainings?: string[];
+  description: any;
+  additionalDescription?: string[];
 }
 
 const SwipedCardsWrapper = ({

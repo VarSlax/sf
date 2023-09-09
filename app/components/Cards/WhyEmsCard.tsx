@@ -5,11 +5,11 @@ import Image from 'next/image';
 const WhyEmsCard = ({
   title,
   type,
-  explainings,
+  description,
 }: {
   title: string;
   type: string;
-  explainings: Array<string | undefined>;
+  description: Array<string | undefined>;
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -30,7 +30,7 @@ const WhyEmsCard = ({
           <span className="w-full mx-2 text-golden text-base">{title}</span>
         </div>
         <div className={visible ? 'block' : 'hidden'}>
-          {explainings.map((explain, i) => (
+          {description.map((reason, i) => (
             <div
               className="mx-2.5 text-sm flex items-center mb-4"
               key={i + 228}
@@ -45,7 +45,7 @@ const WhyEmsCard = ({
                   fill="none"
                 />
               </svg>
-              {explain}
+              {reason}
             </div>
           ))}
         </div>

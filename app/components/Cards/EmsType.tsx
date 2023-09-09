@@ -7,13 +7,13 @@ import bottomPart from 'public/cards/bottom-part.svg';
 const EmsType = ({
   title,
   type,
-  explainings,
-  additionalExplainings,
+  description,
+  additionalDescription,
 }: {
   title: string;
   type: string;
-  explainings: string[];
-  additionalExplainings?: string[];
+  description: string[];
+  additionalDescription?: string[];
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -32,22 +32,22 @@ const EmsType = ({
           backdropFilter: visible ? 'inherit' : 'brightness(0.3)',
         }}
       >
-        {!additionalExplainings
-          ? explainings.map((explain, i) => (
+        {!additionalDescription
+          ? description.map((emsInfo, i) => (
               <div
                 className="mx-2.5 mb-4 flex items-center text-base text-white"
                 key={i}
               >
-                {explain}
+                {emsInfo}
               </div>
             ))
-          : explainings.map((explain, i) => (
+          : description.map((emsInfo, i) => (
               <div key={i}>
                 <div className="mx-2.5 text-base flex items-center mb-4">
-                  {explain}
+                  {emsInfo}
                 </div>
                 <div>
-                  {additionalExplainings.map((additionalExplain, i) => (
+                  {additionalDescription.map((description, i) => (
                     <div
                       className="mx-2.5 text-base flex items-center mb-0.5"
                       key={i}
@@ -64,7 +64,7 @@ const EmsType = ({
                           />
                         </svg>
                       )}
-                      {additionalExplain}
+                      {description}
                     </div>
                   ))}
                 </div>

@@ -28,19 +28,19 @@ export default function Main() {
         pagination
         Component={SwipedCard}
       />
-      <div className="flex overflow-x-auto">
-        {dataForEmsTypesCards.map(({ id, ...props }) => (
-          <EmsType key={id} {...props} />
-        ))}
-      </div>
+      <SwipedCardsWrapper
+        cards={dataForEmsTypesCards}
+        pagination
+        Component={EmsType}
+      />
       <div id="ems-section">
         <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
         <div>
-          {dataForWhyEmsCards.map(({ id, title, explainings, type }) => (
+          {dataForWhyEmsCards.map(({ id, title, description, type }) => (
             <WhyEmsCard
               key={id}
               title={title}
-              explainings={explainings}
+              description={description}
               type={type}
             />
           ))}
