@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import purpleBgImage from 'public/prices/price-purple-bg.svg';
-import goldBgImage from 'public/prices/price-gold-bg.svg';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import purpleBgImage from "public/prices/price-purple-bg.svg";
+import goldBgImage from "public/prices/price-gold-bg.svg";
 
 const PriceCard = ({
   id,
@@ -21,12 +21,12 @@ const PriceCard = ({
     <div
       id="abonements-section"
       style={{
-        border: even ? '0.50px #F2B700 solid' : '0.50px #9A34E8 solid',
+        border: even ? "0.50px #F2B700 solid" : "0.50px #9A34E8 solid",
         background: even
-          ? 'rgba(242, 183, 0, 0.10)'
-          : 'rgba(154, 52, 232, 0.10)',
+          ? "rgba(242, 183, 0, 0.10)"
+          : "rgba(154, 52, 232, 0.10)",
       }}
-      className="flex flex-col items-center justify-between w-3 h-[52vh] md:h-[40vh] min-w-[17rem] md:min-w-[20rem] p-4 rounded-card-radius"
+      className="flex h-[52vh] w-3 min-w-[17rem] flex-col items-center justify-between rounded-card-radius p-4 lg:h-[40vh] lg:min-w-[20rem]"
     >
       <div className="relative">
         {even ? (
@@ -35,7 +35,7 @@ const PriceCard = ({
           <Image src={purpleBgImage} alt="asd" />
         )}
         <Image
-          className="absolute top-10 right-10"
+          className="absolute right-10 top-10"
           width={80}
           height={80}
           src={`prices/${type}.svg`}
@@ -50,13 +50,13 @@ const PriceCard = ({
         ))}
       </div>
       <button
-        onClick={() => push('/order')}
+        onClick={() => push("/order")}
         style={{
           background: even
-            ? 'rgba(242, 183, 0, 0.85)'
-            : 'rgba(154, 52, 232, 0.45)',
+            ? "rgba(242, 183, 0, 0.85)"
+            : "rgba(154, 52, 232, 0.45)",
         }}
-        className="flex px-8 py-1 text-black text-2xl font-semibold bg-purple bg-opacity-40 rounded-3xl border border-white border-opacity-40 cursor-pointer"
+        className="flex cursor-pointer rounded-3xl border border-white border-opacity-40 bg-purple bg-opacity-40 px-8 py-1 text-2xl font-semibold text-black"
       >
         Замовити
       </button>
