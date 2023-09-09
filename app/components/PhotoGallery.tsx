@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Scrollbar, Virtual } from 'swiper/modules';
 import { dataForPhotoGallery } from '../constants/dataForPhotoGallery';
-import getImageForGallery from '../utils/getImageForGallery';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
@@ -21,11 +20,12 @@ const PhotoGallery = () => {
       }}
       modules={[Autoplay, Scrollbar, Virtual]}
     >
-      {dataForPhotoGallery.map(({ id, type }, i) => (
-        <SwiperSlide virtualIndex={id} key={id}>
+      {dataForPhotoGallery.map(({ id, type }) => (
+        <SwiperSlide virtualIndex={id} key={id} className="w-full">
           <Image
-            className="w-full"
-            src={getImageForGallery(type) ?? ''}
+            width={500}
+            height={200}
+            src={`/cards/${type}.webp`}
             alt="no logo"
           />
         </SwiperSlide>

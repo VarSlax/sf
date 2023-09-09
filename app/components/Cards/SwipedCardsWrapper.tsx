@@ -1,18 +1,33 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Virtual } from 'swiper/modules';
-import { dataForSwipedCards } from '../../constants/dataForSwipedCards';
-import SwipedCard from './SwipedCard';
-import getBgImageForSwipedCard from '../../utils/getBgImageForSwipedCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { FC } from 'react';
 
-const SwipedCardsWrapper = () => {
+interface Card {
+  id: number;
+  type: string;
+  title: string;
+  description: string;
+  explainings?: string[];
+  additionalExplainings?: string[];
+}
+
+const SwipedCardsWrapper = ({
+  Component,
+  pagination,
+  cards,
+}: {
+  Component: FC<Card>;
+  pagination: boolean;
+  cards: Card[];
+}) => {
   return (
     <Swiper
       loop
       virtual
-      pagination={true}
+      pagination={pagination}
       className="mySwiper"
       autoplay={{
         delay: 700000,
@@ -20,13 +35,9 @@ const SwipedCardsWrapper = () => {
       }}
       modules={[Virtual, Autoplay, Pagination]}
     >
-      {dataForSwipedCards.map(({ id, type, title, description }, i) => (
-        <SwiperSlide virtualIndex={id} key={id}>
-          <SwipedCard
-            title={title}
-            description={description}
-            bgImage={getBgImageForSwipedCard(type)}
-          />
+      {cards.map(({ ...props }, i) => (
+        <SwiperSlide virtualIndex={i} key={i}>
+          <Component {...props} />
         </SwiperSlide>
       ))}
     </Swiper>

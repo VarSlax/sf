@@ -1,14 +1,14 @@
-"use client";
-import React, { useState } from "react";
-import Image from "next/image";
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 const WhyEmsCard = ({
   title,
-  reasonIcon,
+  type,
   explainings,
 }: {
   title: string;
-  reasonIcon: string;
+  type: string;
   explainings: Array<string | undefined>;
 }) => {
   const [visible, setVisible] = useState(true);
@@ -21,13 +21,15 @@ const WhyEmsCard = ({
             <Image
               className="w-full p-6"
               priority
-              src={reasonIcon}
+              width={100}
+              height={100}
+              src={`cards/${type}.svg`}
               alt="No reason"
             />
           </div>
           <span className="w-full mx-2 text-golden text-base">{title}</span>
         </div>
-        <div className={visible ? "block" : "hidden"}>
+        <div className={visible ? 'block' : 'hidden'}>
           {explainings.map((explain, i) => (
             <div
               className="mx-2.5 text-sm flex items-center mb-4"
@@ -50,10 +52,10 @@ const WhyEmsCard = ({
         <button
           onClick={() => setVisible((vis) => !vis)}
           className={`flex ${
-            visible ? "justify-end" : "justify-start"
+            visible ? 'justify-end' : 'justify-start'
           } my-2 mx-6 p-1 text-white text-xs text-end`}
         >
-          {visible ? "Приховати" : "Детальніше"}
+          {visible ? 'Приховати' : 'Детальніше'}
         </button>
       </div>
     </>

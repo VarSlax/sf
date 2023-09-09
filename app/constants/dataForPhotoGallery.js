@@ -1,14 +1,14 @@
 export const dataForPhotoGallery = [
   {
     id: 123321,
-    type: "ems",
+    type: 'ems',
   },
   {
     id: 98727,
-    type: "box",
+    type: 'box',
   },
   {
     id: 65417,
-    type: "functionalPower",
+    type: 'functional',
   },
 ];

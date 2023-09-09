@@ -1,16 +1,14 @@
 'use client';
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import divider from 'public/cards/swipe-card-divider.svg';
 
 const SwipedCard = ({
   title,
-  bgImage,
+  type,
   description,
 }: {
   title: string;
-  bgImage: any;
+  type: string;
   description: string;
 }) => {
   const { push } = useRouter();
@@ -18,7 +16,7 @@ const SwipedCard = ({
   return (
     <div
       className="bg-cover"
-      style={{ backgroundImage: `url(${bgImage.src})` }}
+      style={{ backgroundImage: `url('/cards/${type}.webp')` }}
     >
       <div className="absolute p-5">
         <span className="text-golden font-semibold text-3xl uppercase">

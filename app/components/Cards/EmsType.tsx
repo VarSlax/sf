@@ -4,21 +4,6 @@ import Image from 'next/image';
 import topPart from 'public/cards/top-part.svg';
 import bottomPart from 'public/cards/bottom-part.svg';
 
-import suit from 'public/cards/suit.jpeg';
-import massage from 'public/cards/massage.jpeg';
-import training from 'public/cards/training.jpeg';
-
-const getBgImageForCard = (type: string) => {
-  switch (type) {
-    case 'training':
-      return training;
-    case 'suit':
-      return suit;
-    case 'massage':
-      return massage;
-  }
-};
-
 const EmsType = ({
   title,
   type,
@@ -88,7 +73,7 @@ const EmsType = ({
       </div>
       <div className="ml-6">
         <button
-          onClick={() => setVisible(vis => !vis)}
+          onClick={() => setVisible((vis) => !vis)}
           className={`flex ${
             visible ? 'justify-end' : 'justify-start'
           } my-2 mx-6 text-white text-xl text-end absolute right-[1%] bottom-[1%]`}
