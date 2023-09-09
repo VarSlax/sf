@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Scrollbar, Virtual } from "swiper/modules";
-import { dataForPhotoGallery } from "./Cards/constants/dataForPhotoGallery";
-import getImageForGallery from "../utils/getImageForGallery";
-import "swiper/css";
-import "swiper/css/scrollbar";
+'use client';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Scrollbar, Virtual } from 'swiper/modules';
+import { dataForPhotoGallery } from '../constants/dataForPhotoGallery';
+import getImageForGallery from '../utils/getImageForGallery';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 
 const PhotoGallery = () => {
   return (
@@ -25,7 +25,7 @@ const PhotoGallery = () => {
         <SwiperSlide virtualIndex={id} key={id}>
           <Image
             className="w-full"
-            src={getImageForGallery(type) ?? ""}
+            src={getImageForGallery(type) ?? ''}
             alt="no logo"
           />
         </SwiperSlide>

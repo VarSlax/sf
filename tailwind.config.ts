@@ -21,7 +21,7 @@ const config: Config = {
       colors: {
         golden: '#f2b700',
         purple: '#9a34e8',
-        'burger-bg': '#171717',
+        main: '#171717',
         'gray-middle': '#27272a',
         'gray-light': '#404040',
         'order-card-bg': '#1C1C1C',

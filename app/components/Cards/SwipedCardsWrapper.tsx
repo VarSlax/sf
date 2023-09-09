@@ -1,7 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Virtual } from 'swiper/modules';
-import { dataForSwipedCards } from './constants/dataForSwipedCards';
+import { dataForSwipedCards } from '../../constants/dataForSwipedCards';
 import SwipedCard from './SwipedCard';
 import getBgImageForSwipedCard from '../../utils/getBgImageForSwipedCard';
 import 'swiper/css';
