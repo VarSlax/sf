@@ -1,9 +1,9 @@
-'use client';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Virtual } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { FC } from 'react';
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Virtual } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { FC } from "react";
 
 interface Card {
   id: number;
@@ -19,7 +19,7 @@ const SwipedCardsWrapper = ({
   cards,
 }: {
   Component: FC<Card>;
-  pagination: boolean;
+  pagination?: boolean;
   cards: Card[];
 }) => {
   return (

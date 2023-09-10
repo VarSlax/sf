@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
-import FAQImage from "public/faq-main-photo.png";
+import FAQImage from "public/faq-main-photo.webp";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import WhyEmsCard from "./components/Cards/WhyEmsCard";
@@ -71,11 +71,7 @@ export default function Main() {
           <div className="mb-4 text-center">
             ціни можуть відрізнятися від студії
           </div>
-          <div className="mx-5 mt-2.5 flex space-x-6 overflow-x-auto text-base">
-            {dataForPriceCards.map(({ id, description, type }) => (
-              <PriceCard key={id} id={id} info={description} type={type} />
-            ))}
-          </div>
+          <SwipedCardsWrapper cards={dataForPriceCards} Component={PriceCard} />
         </div>
         <div id="contacts-section">
           <Title title="Контакти" />

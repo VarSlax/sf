@@ -1,8 +1,8 @@
-'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
-import topPart from 'public/cards/top-part.svg';
-import bottomPart from 'public/cards/bottom-part.svg';
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import topPart from "public/cards/top-part.svg";
+import bottomPart from "public/cards/bottom-part.svg";
 
 const EmsType = ({
   title,
@@ -18,18 +18,18 @@ const EmsType = ({
   const [visible, setVisible] = useState(true);
 
   return (
-    <div className="w-[21rem] min-w-[21rem] xl:min-w-[31rem] xl:rounded-[68px] mx-2 my-10 flex flex-col justify-between bg-cover bg-gray-middle rounded-card-radius text-base relative">
-      <Image src={`/cards/${type}.jpeg`} alt="123" fill />
+    <div className="relative mx-2 my-10 flex w-[21rem] min-w-[21rem] flex-col justify-between rounded-card-radius bg-gray-middle bg-cover text-base xl:min-w-[31rem] xl:rounded-[68px]">
+      <Image src={`/cards/${type}.webp`} alt="123" fill />
       <div>
-        <span className="my-2.5 mx-5 xl:my-10 xl:mx-10 w-full text-golden font-semibold text-3xl uppercase absolute">
+        <span className="absolute mx-5 my-2.5 w-full text-3xl font-semibold uppercase text-golden xl:mx-10 xl:my-10">
           {title}
         </span>
         {visible && <Image src={topPart} className="w-full" alt="no logo" />}
       </div>
       <div
-        className={`${visible ? 'hidden' : 'block'}`}
+        className={`${visible ? "hidden" : "block"}`}
         style={{
-          backdropFilter: visible ? 'inherit' : 'brightness(0.3)',
+          backdropFilter: visible ? "inherit" : "brightness(0.3)",
         }}
       >
         {!additionalDescription
@@ -43,18 +43,18 @@ const EmsType = ({
             ))
           : description.map((emsInfo, i) => (
               <div key={i}>
-                <div className="mx-2.5 text-base flex items-center mb-4">
+                <div className="mx-2.5 mb-4 flex items-center text-base">
                   {emsInfo}
                 </div>
                 <div>
                   {additionalDescription.map((description, i) => (
                     <div
-                      className="mx-2.5 text-base flex items-center mb-0.5"
+                      className="mx-2.5 mb-0.5 flex items-center text-base"
                       key={i}
                     >
                       {i > 0 && (
                         <svg
-                          className="h-6 w-6 mr-2 flex-none stroke-golden stroke-2"
+                          className="mr-2 h-6 w-6 flex-none stroke-golden stroke-2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         >
@@ -75,13 +75,13 @@ const EmsType = ({
         <button
           onClick={() => setVisible((vis) => !vis)}
           className={`flex ${
-            visible ? 'justify-end' : 'justify-start'
-          } my-2 mx-6 text-white text-xl text-end absolute right-[1%] bottom-[1%]`}
+            visible ? "justify-end" : "justify-start"
+          } absolute bottom-[1%] right-[1%] mx-6 my-2 text-end text-xl text-white`}
         >
-          {visible ? 'Детальніше' : 'Приховати'}
+          {visible ? "Детальніше" : "Приховати"}
         </button>
         {visible && (
-          <Image src={bottomPart} className="w-full -mb-px" alt="no logo" />
+          <Image src={bottomPart} className="-mb-px w-full" alt="no logo" />
         )}
       </div>
     </div>

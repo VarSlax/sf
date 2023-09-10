@@ -7,12 +7,12 @@ import goldBgImage from "public/prices/price-gold-bg.svg";
 
 const PriceCard = ({
   id,
-  info,
   type,
+  description,
 }: {
   id: number;
-  info: Array<string>;
   type: string;
+  description: string[];
 }) => {
   const even = id % 2;
   const { push } = useRouter();
@@ -43,9 +43,9 @@ const PriceCard = ({
         />
       </div>
       <div>
-        {info.map((point, i) => (
-          <div className="text-center" key={i + 34}>
-            {point}
+        {description.map((info, i) => (
+          <div className="text-center" key={i}>
+            {info}
           </div>
         ))}
       </div>

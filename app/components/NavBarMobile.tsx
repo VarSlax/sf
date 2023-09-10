@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Hamburger from "hamburger-react";
 import NavLink from "./NavLink";
 import { links } from "../constants";
-import { isMobile } from "../utils";
 
 const NavBarMoblile = () => {
   const [open, setOpen] = useState(false);

@@ -1,5 +1,5 @@
-import { ReactEventHandler } from 'react';
-import Link from 'next/link';
+import { ReactEventHandler } from "react";
+import Link from "next/link";
 
 const NavLink = ({
   title,

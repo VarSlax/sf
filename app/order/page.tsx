@@ -32,8 +32,8 @@ const OrderPage = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col my-12 mx-4 bg-order-card-bg rounded-3xl border border-golden backdrop-blur-sm">
-        <div className="flex justify-end m-2">
+      <div className="mx-4 my-12 flex flex-col rounded-3xl border border-golden bg-order-card-bg backdrop-blur-sm">
+        <div className="m-2 flex justify-end">
           <Image onClick={() => push("/")} src={closeIcon} alt="no image" />
         </div>
         <div className="m-2 text-center text-xl font-semibold text-golden">
@@ -57,7 +57,7 @@ const OrderPage = () => {
                     "Iм'я має бути не менше ніж 2 літери та містити букви.",
                 },
               })}
-              className="w-full mt-4 px-4 mb-2 py-2 text-base bg-order-card-bg rounded-2xl border border-golden font-extralight"
+              className="mb-2 mt-4 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
             />
             <ErrorMessage errors={errors} name="name" />
             <input
@@ -72,24 +72,24 @@ const OrderPage = () => {
                     "У номері телефону мають бути лише цифри та його довжина має бути 10 символів",
                 },
               })}
-              className="w-full my-2 px-4 py-2 text-base bg-order-card-bg rounded-2xl border border-golden font-extralight"
+              className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
             />
             <ErrorMessage errors={errors} name="phoneNumber" />
             <input
               type="text"
               {...register("date", { maxLength: 100 })}
               placeholder="Орієнтовний час дзвінка"
-              className="w-full my-2 px-4 py-2 text-base bg-order-card-bg rounded-2xl border border-golden font-extralight"
+              className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
             />
             <input
               type="text"
               {...register("comment", { maxLength: 300 })}
               placeholder="Коментар"
-              className="w-full my-2 px-4 py-2 text-base bg-order-card-bg rounded-2xl border border-golden font-extralight"
+              className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
             />
             <button
               type="submit"
-              className="w-full mt-2 mb-10 px-8 py-0.5 text-black text-xl font-semibold bg-golden rounded-3xl cursor-pointer "
+              className="mb-10 mt-2 w-full cursor-pointer rounded-3xl bg-golden px-8 py-0.5 text-xl font-semibold text-black "
             >
               Замовити дзвінок
             </button>
