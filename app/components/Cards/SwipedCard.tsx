@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { useRouter } from 'next/navigation';
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 const SwipedCard = ({
   title,
@@ -14,24 +14,30 @@ const SwipedCard = ({
   const { push } = useRouter();
 
   return (
-    <div
-      className="bg-cover"
-      style={{ backgroundImage: `url('/cards/${type}.webp')` }}
-    >
-      <div className="absolute p-5">
-        <span className="text-golden font-semibold text-3xl uppercase">
-          {title}
-        </span>
-        <div className="my-6 text-base w-2/3">{description}</div>
-        <button
-          onClick={() => push('/order')}
-          className="px-5 py-1 text-black text-2xl font-semibold bg-golden rounded-full cursor-pointer"
-        >
-          Замовити
-        </button>
+    <>
+      <div className="h-full items-center max-lg:absolute lg:my-32 lg:flex">
+        <div
+          className="h-full w-full bg-cover bg-center max-lg:absolute max-lg:-scale-x-100 lg:h-[30rem] lg:rounded-3xl lg:bg-cover"
+          style={{
+            backgroundImage: `url('/cards/${type}.webp')`,
+            backgroundPositionX: type === "ems" ? "70%" : "",
+          }}
+        />
+        <div className="relative z-10 p-5 lg:w-2/3 lg:pl-12">
+          <span className="text-3xl font-semibold uppercase text-golden">
+            {title}
+          </span>
+          <div className="my-6 text-base max-lg:w-2/3">{description}</div>
+          <button
+            onClick={() => push("/order")}
+            className="cursor-pointer rounded-full bg-golden px-5 py-1 text-2xl font-semibold text-black"
+          >
+            Замовити
+          </button>
+        </div>
       </div>
       <svg
-        className="w-full h-full"
+        className="relative h-full w-full lg:hidden"
         xmlns="http://www.w3.org/2000/svg"
         width="375"
         height="540"
@@ -81,7 +87,7 @@ const SwipedCard = ({
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </>
   );
 };
 

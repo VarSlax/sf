@@ -1,12 +1,10 @@
 "use client";
+
+import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Virtual } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import { FC } from "react";
 
 interface Card {
-  id: number;
   type: string;
   title: string;
   description: any;
@@ -15,28 +13,25 @@ interface Card {
 
 const SwipedCardsWrapper = ({
   Component,
-  pagination,
   cards,
+  ...props
 }: {
-  Component: FC<Card>;
-  pagination?: boolean;
+  Component: FC<Card & { index: number }>;
   cards: Card[];
 }) => {
   return (
     <Swiper
       loop
       virtual
-      pagination={pagination}
-      className="mySwiper"
-      autoplay={{
-        delay: 700000,
-        disableOnInteraction: true,
-      }}
+      centeredSlides
+      spaceBetween={1}
+      autoplay={{ delay: 700000 }}
       modules={[Virtual, Autoplay, Pagination]}
+      {...props}
     >
-      {cards.map(({ ...props }, i) => (
+      {cards.map((props, i) => (
         <SwiperSlide virtualIndex={i} key={i}>
-          <Component {...props} />
+          <Component {...props} index={i} />
         </SwiperSlide>
       ))}
     </Swiper>

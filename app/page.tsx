@@ -24,16 +24,8 @@ export default function Main() {
     <div className="text-lg text-white">
       <Header />
       <div className="container mx-auto">
-        <SwipedCardsWrapper
-          cards={dataForSwipedCards}
-          pagination
-          Component={SwipedCard}
-        />
-        <SwipedCardsWrapper
-          cards={dataForEmsTypesCards}
-          pagination
-          Component={EmsType}
-        />
+        <SwipedCardsWrapper cards={dataForSwipedCards} Component={SwipedCard} />
+        <SwipedCardsWrapper cards={dataForEmsTypesCards} Component={EmsType} />
         <div id="ems-section">
           <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
           <div className="flex-wrap lg:flex">

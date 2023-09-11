@@ -1,6 +1,5 @@
 export const dataForEmsTypesCards = [
   {
-    id: 11,
     title: 'ЕМС ТРЕНУВАННЯ',
     type: 'training',
     description: [
@@ -10,7 +9,6 @@ export const dataForEmsTypesCards = [
     ],
   },
   {
-    id: 22,
     title: 'Емс костюм',
     type: 'suit',
     description: [
@@ -20,7 +18,6 @@ export const dataForEmsTypesCards = [
     ],
   },
   {
-    id: 33,
     title: 'Емс масаж',
     type: 'massage',
     description: [

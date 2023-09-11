@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/css";
+@import "swiper/css/pagination";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -34,27 +37,4 @@ body {
 .hamburger-react {
   color: #f2b700;
   z-index: 50;
-}
-
-.l {
-  /* stroke-dasharray: 2700;
-  stroke-dashoffset: 2700; */
-  /* animation: logo 5s linear alternate infinite; */
-}
-
-@keyframes logo {
-  0% {
-    /* fill: #f2b700; */
-    stroke-dashoffset: 822;
-  }
-
-  /* 50% {
-    fill: #9a34e8;
-    stroke-dashoffset: 1000;
-  } */
-
-  100% {
-    /* fill: #9a34e8; */
-    stroke-dashoffset: 0;
-  }
 }

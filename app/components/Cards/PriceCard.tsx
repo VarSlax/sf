@@ -6,15 +6,15 @@ import purpleBgImage from "public/prices/price-purple-bg.svg";
 import goldBgImage from "public/prices/price-gold-bg.svg";
 
 const PriceCard = ({
-  id,
+  index,
   type,
   description,
 }: {
-  id: number;
+  index: number;
   type: string;
   description: string[];
 }) => {
-  const even = id % 2;
+  const even = index % 2;
   const { push } = useRouter();
 
   return (

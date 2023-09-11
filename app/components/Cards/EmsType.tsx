@@ -18,8 +18,11 @@ const EmsType = ({
   const [visible, setVisible] = useState(true);
 
   return (
-    <div className="relative mx-2 my-10 flex w-[21rem] min-w-[21rem] flex-col justify-between rounded-card-radius bg-gray-middle bg-cover text-base xl:min-w-[31rem] xl:rounded-[68px]">
-      <Image src={`/cards/${type}.webp`} alt="123" fill />
+    <div className="h-full items-center rounded-3xl max-lg:relative lg:my-32 lg:flex">
+      <div
+        className="h-full w-full bg-cover bg-center max-lg:absolute lg:h-[30rem] lg:rounded-3xl lg:bg-cover"
+        style={{ backgroundImage: `url('/cards/${type}.webp')` }}
+      />
       <div>
         <span className="absolute mx-5 my-2.5 w-full text-3xl font-semibold uppercase text-golden xl:mx-10 xl:my-10">
           {title}
