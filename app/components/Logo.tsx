@@ -1,11 +1,11 @@
-import { isMobile } from '../utils';
+import { isMobile } from "../utils";
 
 export default function Logo() {
   const { phone } = isMobile();
 
   return phone ? (
     <svg
-      className="w-10 fill-golden z-20"
+      className="z-20 w-10 fill-golden"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2649.29 2722.06"
     >

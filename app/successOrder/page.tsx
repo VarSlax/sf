@@ -1,7 +1,7 @@
 "use client";
+
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Header from "../components/Header";
 
 const SuccessOrder = () => {
   const { push } = useRouter();
@@ -11,14 +11,11 @@ const SuccessOrder = () => {
   });
 
   return (
-    <>
-      <Header />
-      <div className="">
-        <div className="my-52 mx-4 py-1 px-3 bg-order-card-bg rounded-3xl border border-golden backdrop-blur-sm text-center text-3xl font-semibold text-golden">
-          Дякуємо за довіру! Ми зв'яжемося з вами найближчим часом
-        </div>
+    <div className="">
+      <div className="mx-4 my-52 rounded-3xl border border-golden bg-order-card-bg px-3 py-1 text-center text-3xl font-semibold text-golden backdrop-blur-sm">
+        Дякуємо за довіру! Ми зв'яжемося з вами найближчим часом
       </div>
-    </>
+    </div>
   );
 };
 
