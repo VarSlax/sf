@@ -18,6 +18,7 @@ import { dataForFaq } from "./constants/dataForFaq";
 import { dataForContacts } from "./constants/dataForContacts";
 import { dataForPriceCards } from "./constants/dataForPriceCard";
 import { dataForSwipedCards } from "./constants/dataForSwipedCards";
+import EffectCards from "./components/Cards/EffectCards";
 
 export default function Main() {
   return (
@@ -25,8 +26,14 @@ export default function Main() {
       <Header />
       <div className="container mx-auto">
         <SwipedCardsWrapper cards={dataForSwipedCards} Component={SwipedCard} />
-        <SwipedCardsWrapper cards={dataForEmsTypesCards} Component={EmsType} />
-        <div id="ems-section">
+        <SwipedCardsWrapper
+          cards={dataForEmsTypesCards}
+          Component={EmsType}
+          // spaceBetween={100}
+          effect={"cards"}
+          modules={[EffectCards]}
+        />
+        <div id="ems-section" className="scroll-m-28">
           <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
           <div className="flex-wrap lg:flex">
             {dataForWhyEmsCards.map(({ id, title, description, type }) => (
@@ -54,18 +61,18 @@ export default function Main() {
             additionalInfo={additionalInfo}
           />
         ))}
-        <div id="photo-gallery-section">
+        <div id="photo-gallery-section" className="scroll-m-28">
           <Title title="Фотогалерея зали" />
           <PhotoGallery />
         </div>
-        <div id="abonements-section">
+        <div id="abonements-section" className="scroll-m-28">
           <Title title="Ціни на абонементи" />
           <div className="mb-4 text-center">
             ціни можуть відрізнятися від студії
           </div>
           <SwipedCardsWrapper cards={dataForPriceCards} Component={PriceCard} />
         </div>
-        <div id="contacts-section">
+        <div id="contacts-section" className="scroll-m-28">
           <Title title="Контакти" />
           {dataForContacts.map(({ id, type, info }) => (
             <Contacts key={id} info={info} type={type} />

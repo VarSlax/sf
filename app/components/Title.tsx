@@ -1,5 +1,5 @@
 const Title = ({ title }: { title: string }) => (
-  <div className="flex justify-center mt-12 mb-2 mx-5 text-golden font-semibold text-2xl uppercase">
+  <div className="m-5 mt-12 text-center text-2xl font-semibold uppercase text-golden">
     {title}
   </div>
 );

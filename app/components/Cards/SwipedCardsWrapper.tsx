@@ -1,8 +1,9 @@
 "use client";
 
 import { FC } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Virtual } from "swiper/modules";
+import { SwiperModule } from "swiper/types";
 
 interface Card {
   type: string;
@@ -14,19 +15,20 @@ interface Card {
 const SwipedCardsWrapper = ({
   Component,
   cards,
+  modules = [],
   ...props
-}: {
-  Component: FC<Card & { index: number }>;
+}: Partial<SwiperProps> & {
   cards: Card[];
+  Component: FC<Card & { index: number }>;
+  modules?: SwiperModule[];
 }) => {
   return (
     <Swiper
       loop
       virtual
       centeredSlides
-      spaceBetween={1}
       autoplay={{ delay: 700000 }}
-      modules={[Virtual, Autoplay, Pagination]}
+      modules={[Virtual, Autoplay, Pagination, ...modules]}
       {...props}
     >
       {cards.map((props, i) => (
