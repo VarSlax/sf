@@ -25,14 +25,13 @@ const SwipedCardsWrapper = ({
   return (
     <Swiper
       loop
-      virtual
       centeredSlides
       autoplay={{ delay: 700000 }}
       modules={[Virtual, Autoplay, Pagination, ...modules]}
       {...props}
     >
       {cards.map((props, i) => (
-        <SwiperSlide virtualIndex={i} key={i}>
+        <SwiperSlide key={i}>
           <Component {...props} index={i} />
         </SwiperSlide>
       ))}

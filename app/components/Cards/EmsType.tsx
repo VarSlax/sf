@@ -18,9 +18,9 @@ const EmsType = ({
   const [visible, setVisible] = useState(true);
 
   return (
-    <div className="m-5 h-96 items-center rounded-3xl max-lg:relative lg:my-32 lg:flex">
+    <div className="m-5 h-[36rem] items-center max-lg:relative lg:my-32 lg:flex">
       <div
-        className="h-full w-full bg-cover bg-center max-lg:absolute lg:h-[30rem] lg:rounded-3xl lg:bg-cover"
+        className="h-full w-full rounded-3xl bg-cover bg-center max-lg:absolute lg:h-[30rem] lg:bg-cover"
         style={{ backgroundImage: `url('/cards/${type}.webp')` }}
       />
       <div>

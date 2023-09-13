@@ -19,19 +19,23 @@ import { dataForContacts } from "./constants/dataForContacts";
 import { dataForPriceCards } from "./constants/dataForPriceCard";
 import { dataForSwipedCards } from "./constants/dataForSwipedCards";
 import EffectCards from "./components/Cards/EffectCards";
+import { isMobile } from "./utils";
 
 export default function Main() {
+  const { phone } = isMobile();
+
   return (
     <div className="text-lg text-white">
       <Header />
+      <video autoPlay loop muted className="h-screen object-cover">
+        <source src="/video.webm" />
+      </video>
       <div className="container mx-auto">
         <SwipedCardsWrapper cards={dataForSwipedCards} Component={SwipedCard} />
         <SwipedCardsWrapper
           cards={dataForEmsTypesCards}
           Component={EmsType}
-          // spaceBetween={100}
-          effect={"cards"}
-          modules={[EffectCards]}
+          {...(phone && { effect: "cards", modules: [EffectCards] })}
         />
         <div id="ems-section" className="scroll-m-28">
           <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
@@ -48,11 +52,6 @@ export default function Main() {
         </div>
         <Image src={FAQImage} className="mt-10 w-full" alt="no photo" />
         <Title title="Часті запитання" />
-        <div className="mx-4 my-3">
-          Ми зібрали та підготували відповіді на найпоширеніші запитання про
-          наші тренування!
-          <div className="my-3 border-b-2 border-black"></div>
-        </div>
         {dataForFaq.map(({ id, question, answer, additionalInfo }) => (
           <Faq
             key={id}
@@ -61,16 +60,20 @@ export default function Main() {
             additionalInfo={additionalInfo}
           />
         ))}
-        <div id="photo-gallery-section" className="scroll-m-28">
+        {/* <div id="photo-gallery-section" className="scroll-m-28">
           <Title title="Фотогалерея зали" />
           <PhotoGallery />
-        </div>
+        </div> */}
         <div id="abonements-section" className="scroll-m-28">
           <Title title="Ціни на абонементи" />
           <div className="mb-4 text-center">
-            ціни можуть відрізнятися від студії
+            Ціни можуть відрізнятися від студії
           </div>
-          <SwipedCardsWrapper cards={dataForPriceCards} Component={PriceCard} />
+          <SwipedCardsWrapper
+            cards={dataForPriceCards}
+            Component={PriceCard}
+            {...(phone && { effect: "cards", modules: [EffectCards] })}
+          />
         </div>
         <div id="contacts-section" className="scroll-m-28">
           <Title title="Контакти" />
