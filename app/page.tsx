@@ -25,7 +25,7 @@ export default function Main() {
   const { phone } = isMobile();
 
   return (
-    <div className="text-lg text-white">
+    <div className="overflow-hidden text-lg text-white">
       <Header />
       <video autoPlay loop muted className="h-screen object-cover">
         <source src="/video.webm" />

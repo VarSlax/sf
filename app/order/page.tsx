@@ -11,7 +11,7 @@ interface FormInputs {
   name: string;
   date: string;
   comment: string;
-  phoneNumber: number;
+  phone: number;
   singleErrorInput: string;
 }
 
@@ -25,7 +25,16 @@ const OrderPage = () => {
   } = useForm<FormInputs>();
 
   const onSubmit = (data: FormInputs) => {
-    console.log(data);
+    try {
+      fetch("https://justfit-gold-backend.vercel.app", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+    } catch {}
+
     return push("/successOrder");
   };
 
@@ -60,7 +69,7 @@ const OrderPage = () => {
           <input
             type="tel"
             placeholder="Номер телефону*"
-            {...register("phoneNumber", {
+            {...register("phone", {
               required:
                 "У номері телефону мають бути лише цифри та його довжина має бути 10 символів",
               pattern: {
@@ -71,7 +80,7 @@ const OrderPage = () => {
             })}
             className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
           />
-          <ErrorMessage errors={errors} name="phoneNumber" />
+          <ErrorMessage errors={errors} name="phone" />
           <input
             type="text"
             {...register("date", { maxLength: 100 })}
