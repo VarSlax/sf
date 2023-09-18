@@ -20,7 +20,7 @@ const PriceCard = ({
     <div
       className={`${
         even ? "bg-golden text-black" : "bg-purple"
-      } m-auto flex h-[52vh] w-3 min-w-[17rem] flex-col items-center justify-between rounded-card-radius p-4 lg:h-[40vh] lg:min-w-[20rem]`}
+      } mx-auto my-16 flex h-[52vh] w-3 min-w-[17rem] flex-col items-center justify-between rounded-card-radius p-4 lg:h-[40vh] lg:min-w-[18rem]`}
     >
       <div className="relative">
         {even ? (

@@ -7,7 +7,7 @@ import WhyEmsCard from "./components/Cards/WhyEmsCard";
 import SwipedCard from "./components/Cards/SwipedCard";
 import EmsType from "./components/Cards/EmsType";
 import Faq from "./components/Faq";
-import PhotoGallery from "./components/PhotoGallery";
+// import PhotoGallery from "./components/PhotoGallery";
 import PriceCard from "./components/Cards/PriceCard";
 import Contacts from "./components/Contacts";
 import Map from "./components/Map";
@@ -25,7 +25,7 @@ export default function Main() {
   const { phone } = isMobile();
 
   return (
-    <div className="overflow-hidden text-lg text-white">
+    <div className="h-screen overflow-x-hidden text-lg text-white">
       <Header />
       <video autoPlay loop muted className="h-screen object-cover">
         <source src="/video.webm" />
@@ -72,7 +72,14 @@ export default function Main() {
           <SwipedCardsWrapper
             cards={dataForPriceCards}
             Component={PriceCard}
-            {...(phone && { effect: "cards", modules: [EffectCards] })}
+            slidesPerView="auto"
+            spaceBetween={50}
+            centeredSlides={false}
+            {...(phone && {
+              effect: "cards",
+              modules: [EffectCards],
+              slidesPerView: 1,
+            })}
           />
         </div>
         <div id="contacts-section" className="scroll-m-28">

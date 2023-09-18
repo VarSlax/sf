@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Virtual } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperModule } from "swiper/types";
 
 interface Card {
@@ -25,13 +25,14 @@ const SwipedCardsWrapper = ({
   return (
     <Swiper
       loop
+      pagination
       centeredSlides
       autoplay={{ delay: 700000 }}
-      modules={[Virtual, Autoplay, Pagination, ...modules]}
+      modules={[Autoplay, Pagination, ...modules]}
       {...props}
     >
       {cards.map((props, i) => (
-        <SwiperSlide key={i}>
+        <SwiperSlide key={i} className="w-auto">
           <Component {...props} index={i} />
         </SwiperSlide>
       ))}
