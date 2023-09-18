@@ -42,13 +42,13 @@ const EmsType = ({
       />
       <Image
         src={bottomPart}
-        className={`absolute w-full transition-all duration-300 lg:hidden ${
+        className={`xs:-bottom-[53rem] absolute -bottom-[calc(300vw-21.5rem)] w-full transition-all duration-300 lg:hidden ${
           visible ? "-translate-y-[36rem]" : ""
         }`}
         alt="no logo"
       />
       <div className="relative z-10 h-full basis-1/2 px-5 py-2.5 lg:px-10 lg:py-20">
-        <div className="text-3xl font-semibold uppercase text-golden lg:py-5">
+        <div className="text-2xl font-semibold uppercase text-golden lg:py-5 lg:text-3xl">
           {title}
         </div>
         <div
@@ -82,7 +82,7 @@ const EmsType = ({
           ))}
         </div>
         <div className={"absolute bottom-5 right-5 text-end text-xl lg:hidden"}>
-          {visible ? "Детальніше" : "Приховати"}
+          {visible ? "Приховати" : "Детальніше"}
         </div>
       </div>
     </div>

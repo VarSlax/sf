@@ -15,7 +15,7 @@ const WhyEmsCard = ({
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="cursor-pointer max-lg:m-5 lg:basis-1/4 lg:p-3">
+    <div className="cursor-pointer max-lg:m-5 lg:basis-1/4 lg:p-5">
       <div
         className="rounded-3xl bg-gray-middle"
         onClick={() => setVisible((v) => !v)}
