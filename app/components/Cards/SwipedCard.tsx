@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const SwipedCard = ({
   title,
@@ -24,16 +25,18 @@ const SwipedCard = ({
           }}
         />
         <div className="relative z-10 p-5 lg:w-2/3 lg:pl-12">
-          <span className="text-3xl font-semibold uppercase text-golden">
+          <span className="xs:text-3xl text-2xl font-semibold uppercase text-golden">
             {title}
           </span>
-          <div className="my-6 text-base max-lg:w-2/3">{description}</div>
-          <button
-            onClick={() => push("/order")}
-            className="cursor-pointer rounded-full bg-golden px-5 py-1 text-2xl font-semibold text-black"
+          <div className="xs:my-6 my-3 text-base max-lg:w-2/3">
+            {description}
+          </div>
+          <Link
+            href="/order"
+            className="xs:text-2xl cursor-pointer rounded-full bg-golden px-5 py-1 text-xl font-semibold text-black"
           >
             Замовити
-          </button>
+          </Link>
         </div>
       </div>
       <svg

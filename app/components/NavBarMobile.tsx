@@ -14,7 +14,7 @@ const NavBarMoblile = () => {
         <Hamburger toggled={open} toggle={setOpen} />
       </div>
       <nav
-        className={`fixed top-0 z-10 flex h-[100vh] w-full flex-col bg-main duration-1000 lg:hidden ${
+        className={`fixed top-0 z-30 flex h-[100vh] w-full flex-col bg-main duration-1000 lg:hidden ${
           open ? "right-0" : "right-[-100vw]"
         }`}
       >

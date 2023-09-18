@@ -39,7 +39,7 @@ const OrderPage = () => {
   };
 
   return (
-    <div className="mx-auto my-12 flex max-w-2xl flex-col rounded-3xl border border-golden bg-order-card-bg p-3 backdrop-blur-sm">
+    <div className="mx-5 my-12 flex max-w-2xl flex-col rounded-3xl border border-golden bg-order-card-bg p-3 backdrop-blur-sm md:mx-auto">
       <div className="m-2 flex justify-end">
         <Image onClick={() => push("/")} src={closeIcon} alt="no image" />
       </div>

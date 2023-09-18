@@ -1,6 +1,4 @@
-import Image from "next/image";
 import SwipedCardsWrapper from "./components/Cards/SwipedCardsWrapper";
-import FAQImage from "public/faq-main-photo.webp";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import WhyEmsCard from "./components/Cards/WhyEmsCard";
@@ -19,6 +17,7 @@ import { dataForPriceCards } from "./constants/dataForPriceCard";
 import { dataForSwipedCards } from "./constants/dataForSwipedCards";
 import EffectCards from "./components/Cards/EffectCards";
 import { isMobile } from "./utils";
+import Video from "./components/Video";
 
 export default function Main() {
   const { phone } = isMobile();
@@ -26,11 +25,14 @@ export default function Main() {
   return (
     <div className="h-screen overflow-x-hidden text-lg text-white">
       <Header />
-      <video autoPlay loop muted className="h-screen object-cover">
-        <source src="/video.webm" />
-      </video>
+      <Video />
       <div className="container mx-auto">
-        <SwipedCardsWrapper cards={dataForSwipedCards} Component={SwipedCard} />
+        <SwipedCardsWrapper
+          id="cards"
+          className="scroll-m-28"
+          cards={dataForSwipedCards}
+          Component={SwipedCard}
+        />
         <SwipedCardsWrapper
           cards={dataForEmsTypesCards}
           Component={EmsType}
@@ -49,7 +51,6 @@ export default function Main() {
             ))}
           </div>
         </div>
-        <Image src={FAQImage} className="mt-10 w-full" alt="no photo" />
         <Title title="Часті запитання" />
         {dataForFaq.map(({ id, question, answer, additionalInfo }) => (
           <Faq
