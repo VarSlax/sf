@@ -49,7 +49,7 @@ const OrderPage = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            placeholder="Як до Вас звертатись?*"
+            placeholder="Як до Вас звертатись?"
             {...register("name", {
               required: "Iм'я має бути не менше ніж 2 літери та містити букви.",
               pattern: {
@@ -68,15 +68,9 @@ const OrderPage = () => {
           <ErrorMessage errors={errors} name="name" />
           <input
             type="tel"
-            placeholder="Номер телефону*"
+            placeholder="Номер телефону"
             {...register("phone", {
-              required:
-                "У номері телефону мають бути лише цифри та його довжина має бути 10 символів",
-              pattern: {
-                value: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-                message:
-                  "У номері телефону мають бути лише цифри та його довжина має бути 10 символів",
-              },
+              required: "Будь ласка, введiть номер для зворотнього дзвiнка",
             })}
             className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
           />

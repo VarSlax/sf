@@ -94,8 +94,8 @@ export default function Main() {
           </div>
           <div className="my-4 basis-1/2 overflow-hidden lg:m-5 lg:rounded-3xl">
             <iframe
-              title="Київ, вул. Оболонська Набережна, буд. 7, корп. 1"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d634.536678885592!2d30.5244073!3d50.4942271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1fbec3b91c1%3A0xd68ef9c59bbafef0!2z0YPQuy4g0J7QsdC-0LvQvtC90YHQutCw0Y8g0L3QsNCxLiwgN9CaMSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1694426778159!5m2!1sru!2sua"
+              title={dataForContacts[2].info as string}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d426.3729277206565!2d30.52001536427181!3d50.49848861900067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1f847c8f831%3A0xea7d1daeb3deca2a!2z0YPQuy4g0J7QsdC-0LvQvtC90YHQutCw0Y8g0L3QsNCxLiwgMTUsINC60L7RgNC_0YPRgSAzLCDQmtC40LXQsiwgMDQyMTA!5e0!3m2!1sru!2sua!4v1695128280794!5m2!1sru!2sua"
               width="100%"
               height="450"
               loading="lazy"
