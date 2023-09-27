@@ -9,17 +9,17 @@ export const dataForPriceCards = [
     id: 1,
     title: "one-star",
     type: "one-star",
-    description: ["1 разове тренування", "200 грн"],
+    description: ["1 разове тренування", "600 грн"],
   },
   {
     id: 2,
     title: "two-stars",
     type: "two-stars",
     description: [
-      "4 тренування ",
-      "2000 грн",
-      "1 тренування ",
-      "500 грн",
+      "4 тренування",
+      "2300 грн",
+      "1 тренування",
+      "575 грн",
     ],
   },
   {
@@ -28,9 +28,9 @@ export const dataForPriceCards = [
     type: "three-stars",
     description: [
       "8 тренувань",
-      "3600 грн",
+      "4100 грн",
       "1 тренування",
-      "450 грн",
+      "512 грн",
     ],
   },
   {
@@ -39,9 +39,9 @@ export const dataForPriceCards = [
     type: "four-stars",
     description: [
       "16 тренуваннь",
-      "6500 грн",
+      "7500 грн",
       "1 тренування",
-      "406 грн",
+      "468 грн",
     ],
   },
   {
@@ -50,9 +50,9 @@ export const dataForPriceCards = [
     type: "five-stars",
     description: [
       "24 тренування",
-      "8900 грн",
+      "10200 грн",
       "1 тренування ",
-      "370 грн",
+      "425 грн",
     ],
   },
 ];
