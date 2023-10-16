@@ -20,7 +20,7 @@ export const links = [
     href: "#contacts-section",
   },
   {
-    title: "Замовити",
+    title: "Записатися",
     href: "/order",
   },
 ];

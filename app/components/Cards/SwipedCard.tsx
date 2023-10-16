@@ -25,17 +25,17 @@ const SwipedCard = ({
           }}
         />
         <div className="relative z-10 p-5 lg:w-2/3 lg:pl-12">
-          <span className="xs:text-3xl text-2xl font-semibold uppercase text-golden">
+          <span className="text-2xl font-semibold uppercase text-golden xs:text-3xl">
             {title}
           </span>
-          <div className="xs:my-6 my-3 text-base max-lg:w-2/3">
+          <div className="my-3 text-base max-lg:w-2/3 xs:my-6">
             {description}
           </div>
           <Link
             href="/order"
-            className="xs:text-2xl cursor-pointer rounded-full bg-golden px-5 py-1 text-xl font-semibold text-black"
+            className="cursor-pointer rounded-full bg-golden px-5 py-1 text-xl font-semibold text-black xs:text-2xl"
           >
-            Замовити
+            Записатися
           </Link>
         </div>
       </div>

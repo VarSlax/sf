@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const Contacts = ({
   type,
@@ -17,8 +17,10 @@ const Contacts = ({
         src={`${type}.svg`}
         alt="no icon"
       />
-      {typeof info === 'string' ? (
-        <div className="my-2">{info}</div>
+      {type === "phone" || typeof info === "string" ? (
+        <a href="tel:+380739797097" className="my-2">
+          {info}
+        </a>
       ) : (
         <div className="my-2">
           {info.map((el, i) => (

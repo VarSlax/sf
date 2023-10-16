@@ -49,7 +49,7 @@ const PriceCard = ({
           even ? "border-black text-black" : "border-white text-white"
         } flex cursor-pointer rounded-3xl border border-opacity-40 bg-opacity-40 px-8 py-1 text-2xl font-semibold`}
       >
-        Замовити
+        Записатися
       </Link>
     </div>
   );

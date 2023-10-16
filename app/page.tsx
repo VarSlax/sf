@@ -27,6 +27,7 @@ export default function Main() {
       <Header />
       <Video />
       <div className="container mx-auto">
+        <Title title="ПОСЛУГИ" className="-mb-20 max-lg:hidden" />
         <SwipedCardsWrapper
           id="cards"
           className="scroll-m-28"
@@ -36,6 +37,7 @@ export default function Main() {
           cards={dataForSwipedCards}
           Component={SwipedCard}
         />
+        <Title title="ЩО ТАКЕ ЕМС?" className="-mb-20 max-lg:hidden" />
         <SwipedCardsWrapper
           cards={dataForEmsTypesCards}
           Component={EmsType}
@@ -71,9 +73,6 @@ export default function Main() {
         </div> */}
         <div id="abonements-section" className="scroll-m-28">
           <Title title="Ціни на абонементи" />
-          <div className="mb-4 text-center">
-            Ціни можуть відрізнятися від студії
-          </div>
           <SwipedCardsWrapper
             paginationType="custom"
             cards={dataForPriceCards}
