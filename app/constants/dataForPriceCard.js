@@ -38,7 +38,7 @@ export const dataForPriceCards = [
     title: "four-stars",
     type: "four-stars",
     description: [
-      "16 тренуваннь",
+      "16 тренувань",
       "7500 грн",
       "1 тренування",
       "468 грн",
