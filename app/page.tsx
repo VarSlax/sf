@@ -30,12 +30,17 @@ export default function Main() {
         <SwipedCardsWrapper
           id="cards"
           className="scroll-m-28"
+          marginBottom
+          paginationType="fraction"
+          navigation
           cards={dataForSwipedCards}
           Component={SwipedCard}
         />
         <SwipedCardsWrapper
           cards={dataForEmsTypesCards}
           Component={EmsType}
+          paginationType="fraction"
+          navigation
           {...(phone && { effect: "cards", modules: [EffectCards] })}
         />
         <div id="ems-section" className="scroll-m-28">
@@ -70,6 +75,7 @@ export default function Main() {
             Ціни можуть відрізнятися від студії
           </div>
           <SwipedCardsWrapper
+            paginationType="custom"
             cards={dataForPriceCards}
             Component={PriceCard}
             slidesPerView="auto"

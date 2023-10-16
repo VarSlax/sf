@@ -2,8 +2,9 @@
 
 import { FC } from "react";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { SwiperModule } from "swiper/types";
+import "swiper/css/navigation";
 
 interface Card {
   type: string;
@@ -14,25 +15,37 @@ interface Card {
 
 const SwipedCardsWrapper = ({
   Component,
+  paginationType,
   cards,
+  navigation,
+  marginBottom,
   modules = [],
   ...props
 }: Partial<SwiperProps> & {
   cards: Card[];
+  marginBottom?: boolean;
+  navigation?: boolean;
+  paginationType: any;
   Component: FC<Card & { index: number }>;
   modules?: SwiperModule[];
 }) => {
   return (
     <Swiper
       loop
-      pagination
+      pagination={{
+        type: paginationType,
+      }}
       centeredSlides
-      autoplay={{ delay: 700000 }}
-      modules={[Autoplay, Pagination, ...modules]}
+      navigation={navigation}
+      autoplay={{ delay: 7000 }}
+      modules={[Navigation, Autoplay, Pagination, ...modules]}
       {...props}
     >
       {cards.map((props, i) => (
-        <SwiperSlide key={i} className="w-auto">
+        <SwiperSlide
+          key={i}
+          className={`${marginBottom ? "mb-12" : ""} w-auto`}
+        >
           <Component {...props} index={i} />
         </SwiperSlide>
       ))}
