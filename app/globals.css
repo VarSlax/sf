@@ -29,6 +29,26 @@ body {
   background: #171717;
 }
 
+.swiper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: initial !important;
+  color: #9a34e8 !important;
+}
+
+.swiper-pagination {
+  width: auto;
+}
+
+.swiper-pagination-fraction {
+  left: auto;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #f2b700 !important;
   padding: 8px;
