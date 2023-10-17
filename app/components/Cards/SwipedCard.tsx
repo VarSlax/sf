@@ -28,14 +28,14 @@ const SwipedCard = ({
           <span className="text-2xl font-semibold uppercase text-golden xs:text-3xl">
             {title}
           </span>
-          <div className="my-3 text-base max-lg:w-2/3 xs:my-6">
+          <div className="my-3 text-sm max-lg:w-2/3 xs:my-6 xs:text-base">
             {description}
           </div>
           <Link
             href="/order"
-            className="cursor-pointer rounded-full bg-golden px-5 py-1 text-xl font-semibold text-black xs:text-2xl"
+            className="cursor-pointer rounded-full bg-golden px-5 py-1 text-center text-lg font-semibold leading-5 text-black max-sm:block max-sm:max-w-[50%] sm:py-3 sm:text-2xl"
           >
-            Записатися
+            Пробне тренування
           </Link>
         </div>
       </div>

@@ -10,7 +10,7 @@ const NavBar = () => {
     <NavBarMoblile />
   ) : (
     <div className="ml-5 flex items-center justify-around text-2xl font-semibold uppercase">
-      {links.map((props) => (
+      {links.slice(0, -1).map((props) => (
         <NavLink {...props} key={props.href} />
       ))}
     </div>

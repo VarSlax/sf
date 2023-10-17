@@ -32,7 +32,7 @@ const WhyEmsCard = ({
             width={100}
             height={100}
           />
-          <span className="max-h-24 w-full text-base text-golden max-lg:mx-5 lg:pb-12 lg:text-center lg:text-xl">
+          <span className="max-h-24 w-full text-base text-golden max-lg:mx-5 lg:pb-12 lg:text-center xl:text-xl">
             {title}
           </span>
         </div>
