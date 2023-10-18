@@ -31,10 +31,11 @@ export default function Main() {
         <SwipedCardsWrapper
           id="cards"
           className="scroll-m-28"
-          marginBottom
           paginationType="fraction"
           navigation
+          navigationMargin
           cards={dataForSwipedCards}
+          delay={7000}
           Component={SwipedCard}
         />
         <Title title="ЩО ТАКЕ ЕМС?" className="-mb-20 max-lg:hidden" />
@@ -43,6 +44,7 @@ export default function Main() {
           Component={EmsType}
           paginationType="fraction"
           navigation
+          delay={7000}
           {...(phone && { effect: "cards", modules: [EffectCards] })}
         />
         <div id="ems-section" className="scroll-m-28">
@@ -74,8 +76,8 @@ export default function Main() {
         <div id="abonements-section" className="scroll-m-28">
           <Title title="Ціни на абонементи" />
           <SwipedCardsWrapper
-            paginationType="custom"
             cards={dataForPriceCards}
+            delay={1000000}
             Component={PriceCard}
             slidesPerView="auto"
             spaceBetween={50}

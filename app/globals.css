@@ -59,6 +59,10 @@ body {
   background-color: #00000080 !important;
 }
 
+.swiper-scrollbar {
+  margin-bottom: 3.7rem;
+}
+
 .hamburger-react {
   color: #f2b700;
   z-index: 50;
