@@ -9,8 +9,6 @@ import closeIcon from "public/cards/close-icon.svg";
 
 interface FormInputs {
   name: string;
-  date: string;
-  comment: string;
   phone: number;
   singleErrorInput: string;
 }
@@ -41,7 +39,12 @@ const OrderPage = () => {
   return (
     <div className="mx-5 my-12 flex max-w-2xl flex-col rounded-3xl border border-golden bg-order-card-bg p-3 backdrop-blur-sm md:mx-auto">
       <div className="m-2 flex justify-end">
-        <Image onClick={() => push("/")} src={closeIcon} alt="no image" />
+        <Image
+          onClick={() => push("/")}
+          src={closeIcon}
+          alt="no image"
+          className="cursor-pointer"
+        />
       </div>
       <div className="m-2 text-center text-xl font-semibold text-golden">
         Хочете почати тренуватися? Замовте дзвінок та дізнайтеся, як швидко
@@ -68,25 +71,13 @@ const OrderPage = () => {
           <ErrorMessage errors={errors} name="name" />
           <input
             type="tel"
-            placeholder="Номер телефону"
+            placeholder="Номер телефону(**********)"
             {...register("phone", {
               required: "Будь ласка, введiть номер для зворотнього дзвiнка",
             })}
             className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
           />
           <ErrorMessage errors={errors} name="phone" />
-          <input
-            type="text"
-            {...register("date", { maxLength: 100 })}
-            placeholder="Орієнтовний час дзвінка"
-            className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
-          />
-          <input
-            type="text"
-            {...register("comment", { maxLength: 300 })}
-            placeholder="Коментар"
-            className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
-          />
           <button
             type="submit"
             className="mb-10 mt-2 w-full cursor-pointer rounded-3xl bg-golden px-8 py-0.5 text-xl font-semibold text-black "
