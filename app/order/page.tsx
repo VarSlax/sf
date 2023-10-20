@@ -43,7 +43,7 @@ const OrderPage = () => {
           onClick={() => push("/")}
           src={closeIcon}
           alt="no image"
-          className="cursor-pointer"
+          className="cursor-pointer hover:animate-spin"
         />
       </div>
       <div className="m-2 text-center text-xl font-semibold text-golden">
@@ -71,7 +71,7 @@ const OrderPage = () => {
           <ErrorMessage errors={errors} name="name" />
           <input
             type="tel"
-            placeholder="Номер телефону(**********)"
+            placeholder="Номер телефону: 123-456-78-99"
             {...register("phone", {
               required: "Будь ласка, введiть номер для зворотнього дзвiнка",
             })}
