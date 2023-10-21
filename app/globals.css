@@ -5,6 +5,8 @@
 @import "swiper/css";
 @import "swiper/css/pagination";
 @import "swiper/css/effect-cards";
+@import "swiper/css/navigation";
+@import "swiper/css/scrollbar";
 
 ::-webkit-scrollbar {
   display: none;
@@ -59,8 +61,12 @@ body {
   background-color: #00000080 !important;
 }
 
+.swiper-scrollbar-drag {
+  background-color: #9a34e8 !important;
+}
+
 .swiper-scrollbar {
-  margin-bottom: 3.7rem;
+  background-color: #f2b700 !important;
 }
 
 .hamburger-react {

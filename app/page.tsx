@@ -9,13 +9,17 @@ import Faq from "./components/Faq";
 import PriceCard from "./components/Cards/PriceCard";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import EffectCards from "./components/Cards/EffectCards";
+import Autoplay from "./components/Cards/Modules/Autoplay";
+import Navigation from "./components/Cards/Modules/Navigation";
+import Pagination from "./components/Cards/Modules/Pagination";
+import Scrollbar from "./components/Cards/Modules/Scrollbar";
 import { dataForWhyEmsCards } from "./constants/dataForWhyEmsCards";
 import { dataForEmsTypesCards } from "./constants/dataForEmsTypesCards";
 import { dataForFaq } from "./constants/dataForFaq";
 import { dataForContacts } from "./constants/dataForContacts";
 import { dataForPriceCards } from "./constants/dataForPriceCard";
 import { dataForSwipedCards } from "./constants/dataForSwipedCards";
-import EffectCards from "./components/Cards/EffectCards";
 import { isMobile } from "./utils";
 import Video from "./components/Video";
 
@@ -30,22 +34,27 @@ export default function Main() {
         <Title title="ПОСЛУГИ" className="-mb-20 max-lg:hidden" />
         <SwipedCardsWrapper
           id="cards"
+          autoplay={{ delay: 7000 }}
+          modules={[Autoplay, Pagination, Navigation]}
+          Component={SwipedCard}
+          cards={dataForSwipedCards}
           className="scroll-m-28"
-          paginationType="fraction"
+          pagination={{ type: "fraction" }}
           navigation
           navigationMargin
-          cards={dataForSwipedCards}
-          delay={7000}
-          Component={SwipedCard}
         />
         <Title title="ЩО ТАКЕ ЕМС?" className="-mb-20 max-lg:hidden" />
         <SwipedCardsWrapper
-          cards={dataForEmsTypesCards}
+          autoplay={{ delay: 7000 }}
+          modules={[Autoplay, Pagination, Navigation]}
           Component={EmsType}
-          paginationType="fraction"
+          cards={dataForEmsTypesCards}
+          pagination={{ type: "fraction" }}
           navigation
-          delay={7000}
-          {...(phone && { effect: "cards", modules: [EffectCards] })}
+          {...(phone && {
+            effect: "cards",
+            modules: [Autoplay, EffectCards, Navigation, Pagination],
+          })}
         />
         <div id="ems-section" className="scroll-m-28">
           <Title title="ЕМС ФІТНЕС - ІДЕАЛЬНЕ РІШЕННЯ ЯКЩО:" />
@@ -77,16 +86,20 @@ export default function Main() {
           <Title title="Ціни на абонементи" />
           <SwipedCardsWrapper
             cards={dataForPriceCards}
-            delay={1000000}
             Component={PriceCard}
-            slidesPerView="auto"
             spaceBetween={50}
             centeredSlides={false}
-            {...(phone && {
-              effect: "cards",
-              modules: [EffectCards],
-              slidesPerView: 1,
-            })}
+            {...(phone
+              ? {
+                  effect: "cards",
+                  modules: [EffectCards],
+                  slidesPerView: 1,
+                }
+              : {
+                  modules: [Scrollbar],
+                  scrollbar: { hide: true },
+                  slidesPerView: "auto",
+                })}
           />
         </div>
         <div
