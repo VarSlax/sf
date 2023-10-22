@@ -37,7 +37,7 @@ const OrderPage = () => {
   };
 
   return (
-    <div className="mx-5 my-12 flex max-w-2xl flex-col rounded-3xl border border-golden bg-order-card-bg p-3 backdrop-blur-sm md:mx-auto">
+    <div className="mx-5 my-12 flex max-w-2xl flex-col border border-golden bg-order-card-bg p-3 backdrop-blur-sm md:mx-auto">
       <div className="m-2 flex justify-end">
         <Image
           onClick={() => push("/")}
@@ -66,7 +66,7 @@ const OrderPage = () => {
                   "Iм'я має бути не менше ніж 2 літери та містити букви.",
               },
             })}
-            className="mb-2 mt-4 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
+            className="mb-2 mt-7 w-full -skew-x-[20deg] border border-golden bg-order-card-bg px-4 py-2.5 text-base font-extralight"
           />
           <ErrorMessage errors={errors} name="name" />
           <input
@@ -75,12 +75,12 @@ const OrderPage = () => {
             {...register("phone", {
               required: "Будь ласка, введiть номер для зворотнього дзвiнка",
             })}
-            className="my-2 w-full rounded-2xl border border-golden bg-order-card-bg px-4 py-2 text-base font-extralight"
+            className="my-2 w-full -skew-x-[20deg] border border-golden bg-order-card-bg px-4 py-2.5 text-base font-extralight"
           />
           <ErrorMessage errors={errors} name="phone" />
           <button
             type="submit"
-            className="mb-10 mt-2 w-full cursor-pointer rounded-3xl bg-golden px-8 py-0.5 text-xl font-semibold text-black "
+            className="mb-2 mt-7 w-full -skew-x-[20deg] cursor-pointer bg-golden px-8 py-1.5 text-xl font-semibold text-main shadow shadow-golden hover:shadow-inner hover:shadow-main"
           >
             Замовити дзвінок
           </button>
