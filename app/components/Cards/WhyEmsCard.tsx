@@ -26,9 +26,7 @@ const WhyEmsCard = ({
           }`}
         >
           <Image
-            className={`w-1/3 scale-110 rounded-2xl p-4 max-lg:bg-gray-light lg:w-full lg:p-7 ${
-              !visible && "animate-bounce"
-            }`}
+            className="w-1/3 scale-110 rounded-2xl p-4 max-lg:bg-gray-light lg:w-full lg:p-7"
             src={`cards/${type}.svg`}
             alt="No reason"
             width={100}
@@ -55,6 +53,13 @@ const WhyEmsCard = ({
             </div>
           ))}
         </div>
+        {!visible && (
+          <div className="flex justify-end pb-1 pr-3">
+            <abbr className="max-w-min animate-bounce rounded-full border-2 border-golden px-2 font-bold text-golden">
+              ?
+            </abbr>
+          </div>
+        )}
       </div>
     </div>
   );
