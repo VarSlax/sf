@@ -97,7 +97,7 @@ export default function Main() {
                 }
               : {
                   modules: [Scrollbar],
-                  scrollbar: { hide: true },
+                  scrollbar: { hide: false },
                   slidesPerView: "auto",
                 })}
           />
