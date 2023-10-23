@@ -47,8 +47,10 @@ const OrderPage = () => {
         />
       </div>
       <div className="m-2 text-center text-xl font-semibold text-golden">
-        Хочете почати тренуватися? Замовте дзвінок та дізнайтеся, як швидко
-        досягнути бажаних результатів
+        <div className="mb-3">Хочете почати тренуватися?</div>
+        <div>
+          Замовте дзвінок та дізнайтеся, як швидко досягнути бажаних результатів
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
