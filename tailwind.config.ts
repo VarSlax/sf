@@ -13,6 +13,17 @@ const config: Config = {
       ...defaultTheme.screens,
     },
     extend: {
+      animation: {
+        "lazy-flex": "bounce linear 30s 1s infinite",
+      },
+      keyframes: {
+        bounce: {
+          "96.5%": { transform: "rotate(0deg)" },
+          "97.5%": { transform: "rotate(180deg)" },
+          "99%": { transform: "rotate(360deg)" },
+          "20%, 100%": { transform: "rotate(0deg)" },
+        },
+      },
       height: {
         "initial-height-important": "initial !important",
       },

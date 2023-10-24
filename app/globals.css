@@ -30,15 +30,15 @@ body {
 }
 
 .swiper {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-around !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  position: initial !important;
-  color: #9a34e8 !important;
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  position: initial;
+  color: #9a34e8;
 }
 
 .swiper-pagination {
@@ -49,14 +49,14 @@ body {
   left: auto;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #f2b700 !important;
+.swiper .swiper-pagination-bullet-active {
+  background-color: #f2b700;
   padding: 8px;
 }
 
-.swiper-pagination-bullet {
+.swiper .swiper-pagination-bullet {
   padding: 8px;
-  background-color: #00000080 !important;
+  background-color: #00000080;
 }
 
 .hamburger-react {

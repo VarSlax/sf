@@ -15,9 +15,9 @@ const WhyEmsCard = ({
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="cursor-pointer max-lg:m-5 lg:basis-1/4 lg:p-5">
+    <div className="cursor-pointer max-lg:m-4 lg:basis-1/4 lg:p-5">
       <div
-        className="rounded-3xl bg-gray-middle"
+        className="rounded-3xl bg-gray-middle lg:min-h-full lg:hover:bg-gray-light"
         onClick={() => setVisible((v) => !v)}
       >
         <div
@@ -32,8 +32,15 @@ const WhyEmsCard = ({
             width={100}
             height={100}
           />
-          <span className="max-h-24 w-full text-base text-golden max-lg:mx-5 lg:pb-12 lg:text-center xl:text-xl">
+          <span className="max-h-24 w-full text-base text-golden max-lg:mx-2 lg:pb-0 lg:text-center xl:text-xl">
             {title}
+            {!visible && (
+              <div className="flex justify-end pb-1">
+                <div className="max-w-min animate-lazy-flex rounded-full border-2 border-golden px-2 font-bold text-golden">
+                  ?
+                </div>
+              </div>
+            )}
           </span>
         </div>
         <div className={`${visible ? "block" : "hidden"} p-2`}>
@@ -53,13 +60,6 @@ const WhyEmsCard = ({
             </div>
           ))}
         </div>
-        {!visible && (
-          <div className="flex justify-end pb-1 pr-3">
-            <abbr className="max-w-min animate-bounce rounded-full border-2 border-golden px-2 font-bold text-golden">
-              ?
-            </abbr>
-          </div>
-        )}
       </div>
     </div>
   );
