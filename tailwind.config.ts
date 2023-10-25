@@ -13,6 +13,17 @@ const config: Config = {
       ...defaultTheme.screens,
     },
     extend: {
+      animation: {
+        ping: "ping 10s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
+      keyframes: {
+        ping: {
+          "7%, 100%": {
+            transform: "scale(1.6)",
+            opacity: "0",
+          },
+        },
+      },
       height: {
         "initial-height-important": "initial !important",
       },

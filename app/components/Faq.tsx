@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Faq = ({
   question,
@@ -19,7 +20,17 @@ const Faq = ({
         className={`${visible ? " text-golden" : ""} mx-4 my-3`}
         onClick={() => setVisible((vis) => !vis)}
       >
-        {question}
+        <div className=" flex justify-between">
+          {question}
+          <Image
+            className={`duration-200 ${visible && "rotate-180"}`}
+            width={25}
+            height={25}
+            src={`arrow.svg`}
+            alt="no icon"
+          />
+        </div>
+
         {visible && (
           <>
             <div className="mt-4 text-white">{answer}</div>
