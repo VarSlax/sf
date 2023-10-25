@@ -23,7 +23,7 @@ const Faq = ({
         <div className=" flex justify-between">
           {question}
           <Image
-            className={`duration-200 ${visible && "rotate-180"}`}
+            className={`ml-3 duration-200 ${visible && "rotate-180"}`}
             width={25}
             height={25}
             src={`arrow.svg`}
