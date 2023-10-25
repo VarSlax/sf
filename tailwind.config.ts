@@ -14,14 +14,14 @@ const config: Config = {
     },
     extend: {
       animation: {
-        "lazy-flex": "bounce linear 30s 1s infinite",
+        ping: "ping 10s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
-        bounce: {
-          "96.5%": { transform: "rotate(0deg)" },
-          "97.5%": { transform: "rotate(180deg)" },
-          "99%": { transform: "rotate(360deg)" },
-          "20%, 100%": { transform: "rotate(0deg)" },
+        ping: {
+          "7%, 100%": {
+            transform: "scale(1.6)",
+            opacity: "0",
+          },
         },
       },
       height: {
